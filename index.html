@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>TravelHub — туры на запуск ракеты с Байконура | Туроператор Казахстана</title>
+  <meta name="description" content="Увидеть запуск ракеты с Байконура вживую: туры 1–3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения. Туры по всему Казахстану.">
+  <link rel="canonical" href="https://ali-hub-01.github.io/travelhub/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TravelHub">
+  <meta property="og:title" content="TravelHub — туры на запуск ракеты с Байконура">
+  <meta property="og:description" content="Байконур — наша специализация. Весь Казахстан — наша территория. Туры на запуски ракет от лицензированного туроператора РК.">
+  <meta property="og:url" content="https://ali-hub-01.github.io/travelhub/">
+  <meta property="og:image" content="https://ali-hub-01.github.io/travelhub/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TravelHub — туры на запуск ракеты с Байконура">
+  <meta name="twitter:description" content="Увидеть старт ракеты вживую. Лицензированный туроператор Казахстана. Байконур, Мангистау, горы Алматы, Астана.">
+  <meta name="twitter:image" content="https://ali-hub-01.github.io/travelhub/assets/og-image.jpg">
+
+  <!-- Иконки -->
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Шрифты: Unbounded (заголовки, кириллица+латиница) + Manrope (текст) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================= ШАПКА (светлая — логотип на белом) ======================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="TravelHub">
+        <img src="assets/logo.png" alt="TravelHub" width="44" height="44" class="brand-logo">
+        <span class="brand-word">Travel<b>Hub</b></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация" data-i18n-aria="nav.aria">
+        <a href="#tours"    data-i18n="nav.tours">Туры</a>
+        <a href="#route"    data-i18n="nav.route">Маршрут</a>
+        <a href="#included" data-i18n="nav.included">Что включено</a>
+        <a href="#about"    data-i18n="nav.why">Почему мы</a>
+        <a href="#schedule" data-i18n="nav.schedule">Пуски</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+
+        <!-- Переключатель языков (дублируется в мобильном меню автоматически) -->
+        <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-aria="lang.aria">
+          <button type="button" class="lang-btn" data-lang="ru">РУС</button>
+          <button type="button" class="lang-btn" data-lang="en">ENG</button>
+          <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        </div>
+
+        <a href="#booking" class="btn btn-primary btn-nav" data-i18n="nav.cta">Забронировать</a>
+      </nav>
+
+      <button type="button" class="burger" id="burgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Открыть меню" data-i18n-aria="nav.burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO: звёздное небо + стартовый комплекс ======================= -->
+    <section class="hero" id="hero">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <p class="hero-kicker reveal">
+          <span class="kicker-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.kicker">Лицензированный туроператор Казахстана</span>
+        </p>
+
+        <h1 class="hero-title reveal">
+          <span data-i18n="hero.title1">Старт ракеты.</span>
+          <span class="accent" data-i18n="hero.title2">Вживую.</span>
+          <span data-i18n="hero.title3">С Байконура.</span>
+        </h1>
+
+        <p class="hero-sub reveal" data-i18n="hero.sub">Байконур — наша специализация. Весь Казахстан — наша территория.</p>
+
+        <div class="hero-cta reveal">
+          <a href="#booking" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Забронировать тур</a>
+          <a href="#tours" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">Смотреть туры</a>
+        </div>
+
+        <!-- Таймер до ближайшего пуска -->
+        <div class="countdown-card reveal" role="timer" aria-live="off">
+          <div class="countdown-head">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.next">До ближайшего пуска — Союз / Прогресс МС-35</span>
+            <span class="countdown-date">09.09.2026</span>
+          </div>
+          <div class="countdown" id="countdown">
+            <div class="cd-cell"><span class="cd-num" id="cdD">--</span><span class="cd-label" data-i18n="cd.days">дней</span></div>
+            <span class="cd-sep" aria-hidden="true">:</span>
+            <div class="cd-cell"><span class="cd-num" id="cdH">--</span><span class="cd-label" data-i18n="cd.hours">часов</span></div>
+            <span class="cd-sep" aria-hidden="true">:</span>
+            <div class="cd-cell"><span class="cd-num" id="cdM">--</span><span class="cd-label" data-i18n="cd.min">минут</span></div>
+            <span class="cd-sep" aria-hidden="true">:</span>
+            <div class="cd-cell"><span class="cd-num" id="cdS">--</span><span class="cd-label" data-i18n="cd.sec">секунд</span></div>
+          </div>
+          <p class="countdown-note" data-i18n="hero.datenote">Дата уточняется по графику Роскосмоса</p>
+        </div>
+      </div>
+
+      <div class="hero-bottom-fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======================= ТУРЫ ======================= -->
+    <section class="section section-light" id="tours">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="tours.kicker">Туры и цены</p>
+        <h2 class="section-title reveal" data-i18n="tours.title">Выберите свою космическую программу</h2>
+        <p class="section-sub reveal" data-i18n="tours.sub">Индивидуалам, группам, турагентствам и международным туроператорам</p>
+
+        <div class="tours-grid">
+
+          <!-- Тур 1: Байконур 1 день -->
+          <article class="tour-card reveal" id="tour-1day">
+            <div class="tour-flag flag-hot" data-i18n="tours.bestseller">Бестселлер</div>
+            <div class="tour-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c3.5 2.4 5 5.8 5 9.5 0 1.6-.3 3.1-.8 4.5H7.8A12.7 12.7 0 0 1 7 11.5C7 7.8 8.5 4.4 12 2Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="1.8" stroke="currentColor" stroke-width="1.6"/><path d="M7.6 13.5 5 17.5l3.5-.9M16.4 13.5l2.6 4-3.5-.9M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="tour-name" data-i18n="t1.name">Байконур: наблюдение запуска, 1 день</h3>
+            <p class="tour-desc" data-i18n="t1.desc">Экспедиция к легендарному космодрому в день пуска. Грохот двигателей, пламя и дрожь земли — с ближайшей безопасной точки.</p>
+            <p class="tour-inc"><span data-i18n="t1.inc">Трансферы · гид · пропуска · точка наблюдения</span></p>
+            <div class="tour-foot">
+              <div class="tour-price"><span class="price-pre" data-i18n="price.from">от</span> <span class="price-num">150 000 ₸</span></div>
+              <a class="btn btn-primary btn-book" data-wa="t1" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="btn.book">Забронировать</a>
+            </div>
+          </article>
+
+          <!-- Тур 2: Байконур 3 дня -->
+          <article class="tour-card reveal" id="tour-3day">
+            <div class="tour-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M20.6 8.6c1.9 1.1 2.9 2.3 2.6 3.4-.5 1.9-5.4 2.5-11 1.4C6.7 12.3 2.3 10 .8 8.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3 class="tour-name" data-i18n="t2.name">Байконур: расширенная программа, 3 дня</h3>
+            <p class="tour-desc" data-i18n="t2.desc">Полное погружение: вывоз ракеты, Гагаринский старт, музеи и сам запуск. Три дня внутри живой космической истории.</p>
+            <p class="tour-inc"><span data-i18n="t2.inc">Отель · завтраки · трансферы · гид · пропуска</span></p>
+            <p class="tour-note" data-i18n="t2.note">Пилотируемый пуск — 450 000 ₸ · беспилотный — от 300 000 ₸</p>
+            <div class="tour-foot">
+              <div class="tour-price"><span class="price-num">300–450 <small>тыс.</small> ₸</span></div>
+              <a class="btn btn-primary btn-book" data-wa="t2" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="btn.book">Забронировать</a>
+            </div>
+          </article>
+
+          <!-- Тур 3: Буран -->
+          <article class="tour-card reveal" id="tour-buran">
+            <div class="tour-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 15.5 12 4l9 11.5H3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 15.5v3M16 15.5v3M12 15.5V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tour-name" data-i18n="t3.name">Байконур: тур «Буран», 1 день</h3>
+            <p class="tour-desc" data-i18n="t3.desc">Легендарный корабль «Буран» и ракета «Энергия-М» в монтажно-испытательном корпусе. Плюс музей космонавтики.</p>
+            <p class="tour-inc"><span data-i18n="t3.inc">Трансферы · гид · пропуска · музей</span></p>
+            <div class="tour-foot">
+              <div class="tour-price"><span class="price-num">100 000 ₸</span></div>
+              <a class="btn btn-primary btn-book" data-wa="t3" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="btn.book">Забронировать</a>
+            </div>
+          </article>
+
+          <!-- Тур 4: Корпоратив / MICE -->
+          <article class="tour-card reveal" id="tour-corporate">
+            <div class="tour-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8.5" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8.5" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 18c.6-2.6 2.4-4 4.5-4s3.9 1.4 4.5 4M11.5 18c.6-2.6 2.4-4 4.5-4s3.9 1.4 4.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tour-name" data-i18n="t4.name">Корпоратив · группы · MICE</h3>
+            <p class="tour-desc" data-i18n="t4.desc">Корпоративные выезды, тимбилдинги и приём групп любого размера. Разработаем сценарий под задачи вашей компании.</p>
+            <p class="tour-inc"><span data-i18n="t4.inc">Программа под ключ · логистика · сопровождение</span></p>
+            <div class="tour-foot">
+              <div class="tour-price"><span class="price-req" data-i18n="price.request">цена по запросу</span></div>
+              <a class="btn btn-primary btn-book" data-wa="t4" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="btn.book">Забронировать</a>
+            </div>
+          </article>
+
+          <!-- Тур 5: Весь Казахстан -->
+          <article class="tour-card tour-card-wide reveal" id="tour-kazakhstan">
+            <div class="tour-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9h17M3.5 15h17M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tour-name" data-i18n="t5.name">Весь Казахстан под запрос</h3>
+            <p class="tour-desc" data-i18n="t5.desc">Марсианские каньоны Мангистау, горы Алматы, футуристичная Астана. Соберём индивидуальный маршрут по всей стране.</p>
+            <p class="tour-inc"><span data-i18n="t5.inc">Индивидуальная программа · расчёт стоимости · организация на месте</span></p>
+            <div class="tour-foot">
+              <div class="tour-price"><span class="price-req" data-i18n="price.request">цена по запросу</span></div>
+              <a class="btn btn-primary btn-book" data-wa="t5" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="btn.book">Забронировать</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CTA-ЛЕНТА: маршрут под запрос ======================= -->
+    <section class="custom-band" id="custom">
+      <div class="container custom-inner reveal">
+        <div>
+          <h2 class="custom-title" data-i18n="custom.title">Не нашли нужный маршрут?</h2>
+          <p class="custom-text" data-i18n="custom.text">Расскажите, какой Казахстан хотят увидеть ваши туристы — мы разработаем программу под запрос, рассчитаем стоимость и организуем поездку на месте.</p>
+        </div>
+        <a class="btn btn-light btn-lg" data-wa="custom" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="custom.cta">Обсудить программу</a>
+      </div>
+    </section>
+
+    <!-- ======================= МАРШРУТ ТУРА ======================= -->
+    <section class="section section-dark" id="route">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="route.kicker">Маршрут тура на Байконур</p>
+        <h2 class="section-title reveal" data-i18n="route.title">7 точек одного большого дня</h2>
+        <p class="section-sub reveal" data-i18n="route.sub">От степного мемориала — до огня стартующей ракеты</p>
+
+        <div class="route-layout">
+          <!-- Нативный таймлайн -->
+          <ol class="route-timeline">
+            <li class="route-step reveal"><span class="route-num">1</span><span class="route-label" data-i18n="route.p1">Мемориал Коркыт Ата</span></li>
+            <li class="route-step reveal"><span class="route-num">2</span><span class="route-label" data-i18n="route.p2">Беседка Гагарина</span></li>
+            <li class="route-step reveal"><span class="route-num">3</span><span class="route-label" data-i18n="route.p3">Гагаринский старт — Площадка №1</span></li>
+            <li class="route-step route-step-launch reveal"><span class="route-num">4</span><span class="route-label" data-i18n="route.p4">Наблюдение запуска ракеты</span></li>
+            <li class="route-step reveal"><span class="route-num">5</span><span class="route-label" data-i18n="route.p5">Ракета «Энергия-М»</span></li>
+            <li class="route-step reveal"><span class="route-num">6</span><span class="route-label" data-i18n="route.p6">Космический корабль «Буран»</span></li>
+            <li class="route-step reveal"><span class="route-num">7</span><span class="route-label" data-i18n="route.p7">Музей космонавтики</span></li>
+          </ol>
+
+          <figure class="route-figure reveal">
+            <img src="assets/tour-route.jpg" alt="Карта маршрута тура на Байконур: 7 точек от мемориала Коркыт Ата до музея космонавтики" data-i18n-alt="route.imgalt" loading="lazy" width="1200" height="1200">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ЧТО ВКЛЮЧЕНО ======================= -->
+    <section class="section section-light" id="included">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="inc.kicker">Всё уже включено</p>
+        <h2 class="section-title reveal" data-i18n="inc.title">Вы наблюдаете запуск — остальное делаем мы</h2>
+
+        <ul class="included-grid">
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c4.4-3.6 7-7.2 7-10.6A7 7 0 0 0 5 10.4C5 13.8 7.6 17.4 12 21Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 10.5 11 12l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="inc.i5">Доступ на космодром и наблюдение с ближайших безопасных точек</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" stroke="currentColor" stroke-width="1.6"/></svg></span><span data-i18n="inc.i1">Гиды-переводчики: русский, английский, китайский</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20V8.5L12 4l9 4.5V20" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20v-5h6v5M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="inc.i2">Проживание в отелях</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 15h16l-1.5 4.5h-13L4 15Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6.5 15a5.5 5.5 0 0 1 11 0M12 9.5V7.5M8.5 9.8 7.6 8M15.5 9.8l.9-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="inc.i3">Завтраки</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16V9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v7" stroke="currentColor" stroke-width="1.6"/><path d="M3 16h18v2.5H3V16ZM7 18.5V20M17 18.5V20M7.5 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="inc.i4">Все трансферы по программе</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17.5 4.5 19 3m1.5 4H22M4.5 4.5 3 3M2 7h1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="inc.i6">Встречи с космонавтами</span></li>
+          <li class="inc-item reveal"><span class="inc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 11 15l4.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="inc.i7">Оформление пропусков и вся логистика</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= ПОЧЕМУ МЫ ======================= -->
+    <section class="section section-dark" id="about">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="why.kicker">Почему TravelHub</p>
+        <h2 class="section-title reveal" data-i18n="why.title">Космос — это серьёзно. Мы тоже.</h2>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <span class="why-num">01</span>
+            <h3 data-i18n="why.w1t">Ближайшие точки наблюдения</h3>
+            <p data-i18n="why.w1x">Смотрите старт с ближайших безопасных площадок — максимум эмоций без компромиссов.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-num">02</span>
+            <h3 data-i18n="why.w2t">Лицензированный туроператор РК</h3>
+            <p data-i18n="why.w2x">Официальная лицензия на въездной и внутренний туризм. Работаем прозрачно и по договору.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-num">03</span>
+            <h3 data-i18n="why.w3t">Пропуска и логистика — на нас</h3>
+            <p data-i18n="why.w3x">Космодром — режимный объект. Все разрешения, пропуска и трансферы оформляем сами.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-num">04</span>
+            <h3 data-i18n="why.w4t">Профессиональные гиды</h3>
+            <p data-i18n="why.w4x">Знают Байконур изнутри и рассказывают о космосе так, что мурашки — до старта.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-num">05</span>
+            <h3 data-i18n="why.w5t">100% возврат</h3>
+            <p data-i18n="why.w5x">Пуск отменён или перенесён — вернём деньги полностью либо перенесём вашу поездку.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-num">06</span>
+            <h3 data-i18n="why.w6t">Специализация + территория</h3>
+            <p data-i18n="why.w6x">Байконур — наша специализация. Весь Казахстан — наша территория.</p>
+          </div>
+        </div>
+
+        <!-- Галерея: реальные фото -->
+        <div class="gallery" id="gallery">
+          <figure class="gallery-item reveal">
+            <img src="assets/baikonur-pad.jpg" alt="Стартовый комплекс космодрома Байконур" data-i18n-alt="gal.a1" loading="lazy" width="1600" height="1200">
+            <figcaption data-i18n="gal.c1">Стартовый комплекс, Байконур</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/energia-m.jpg" alt="Ракета «Энергия-М» в монтажно-испытательном корпусе Байконура" data-i18n-alt="gal.a2" loading="lazy" width="1100" height="1649">
+            <figcaption data-i18n="gal.c2">Ракета «Энергия-М», МИК</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ЛИЦЕНЗИЯ ======================= -->
+    <section class="section section-light" id="license">
+      <div class="container license-layout">
+        <!-- «Печать» SVG -->
+        <div class="license-seal reveal" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <path id="sealCircle" d="M60 14a46 46 0 1 1 0 92 46 46 0 0 1 0-92Z"></path>
+            </defs>
+            <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <text font-size="9.5" letter-spacing="2.6" fill="currentColor">
+              <textPath href="#sealCircle">TRAVELHUB · LICENSED TOUR OPERATOR · KAZAKHSTAN ·</textPath>
+            </text>
+            <path d="M60 44l4.7 9.5 10.5 1.5-7.6 7.4 1.8 10.4L60 67.9l-9.4 4.9 1.8-10.4-7.6-7.4 10.5-1.5L60 44Z" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div class="license-body">
+          <p class="section-kicker reveal" data-i18n="lic.kicker">Работаем официально</p>
+          <h2 class="section-title reveal" data-i18n="lic.title">Лицензированный туроператор Республики Казахстан</h2>
+          <dl class="license-facts reveal">
+            <div><dt data-i18n="lic.numL">Лицензия туроператора</dt><dd>№ 26004458 · 13.02.2026</dd></div>
+            <div><dt data-i18n="lic.typeL">Вид деятельности</dt><dd data-i18n="lic.typeV">Въездной и внутренний туризм</dd></div>
+            <div><dt data-i18n="lic.compL">Компания</dt><dd><span data-i18n="lic.compV">ТОО «TravelHub»</span> · <span data-i18n="lic.bin">БИН</span> 240640028614</dd></div>
+            <div><dt data-i18n="lic.cityL">Город</dt><dd data-i18n="lic.cityV">Астана, Казахстан</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= РАСПИСАНИЕ ПУСКОВ ======================= -->
+    <section class="section section-dark section-schedule" id="schedule">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="sch.kicker">Расписание пусков</p>
+        <h2 class="section-title reveal" data-i18n="sch.title">Ближайшие запуски с Байконура</h2>
+
+        <div class="launch-list">
+          <div class="launch-row launch-next reveal">
+            <div class="launch-date"><span class="ld-day">09</span><span class="ld-my" data-i18n="sch.l1m">сентября 2026</span></div>
+            <div class="launch-info">
+              <h3 data-i18n="sch.l1n">Союз-2.1а · Прогресс МС-35</h3>
+              <p data-i18n="sch.l1x">Грузовой корабль к МКС · доступны туры 1 и 3 дня</p>
+            </div>
+            <span class="launch-tag" data-i18n="sch.next">ближайший</span>
+          </div>
+
+          <div class="launch-row reveal">
+            <div class="launch-date"><span class="ld-day">24</span><span class="ld-my" data-i18n="sch.l2m">ноября 2026</span></div>
+            <div class="launch-info">
+              <h3 data-i18n="sch.l2n">Союз-2.1а · Прогресс МС-36</h3>
+              <p data-i18n="sch.l2x">Грузовой корабль к МКС · открыто бронирование</p>
+            </div>
+            <span class="launch-tag launch-tag-soft" data-i18n="sch.open">бронирование открыто</span>
+          </div>
+        </div>
+
+        <p class="schedule-note reveal" data-i18n="sch.note">Даты пусков уточняются по графику Роскосмоса — подтвердим при бронировании.</p>
+      </div>
+    </section>
+
+    <!-- ======================= ФОРМА ЗАЯВКИ ======================= -->
+    <section class="section section-light" id="booking">
+      <div class="container booking-layout">
+        <div class="booking-intro">
+          <p class="section-kicker reveal" data-i18n="bk.kicker">Заявка за 30 секунд</p>
+          <h2 class="section-title reveal" data-i18n="bk.title">Забронируйте место у стартового стола</h2>
+          <p class="section-sub reveal" data-i18n="bk.sub">Заполните форму — заявка откроется в WhatsApp, мы ответим быстро. Никаких данных на сервер не отправляем.</p>
+          <ul class="booking-points reveal">
+            <li data-i18n="bk.p1">Ответ в WhatsApp в течение рабочего дня</li>
+            <li data-i18n="bk.p2">Поможем выбрать дату под ближайший пуск</li>
+            <li data-i18n="bk.p3">100% возврат при отмене или переносе пуска</li>
+          </ul>
+        </div>
+
+        <form class="booking-form reveal" id="bookingForm" novalidate>
+          <div class="field">
+            <label for="fName" data-i18n="form.name">Ваше имя</label>
+            <input type="text" id="fName" name="name" autocomplete="name" required data-i18n-placeholder="form.namePh" placeholder="Как к вам обращаться">
+          </div>
+
+          <div class="field">
+            <label for="fTour" data-i18n="form.tour">Тур</label>
+            <select id="fTour" name="tour" required>
+              <option value="" data-i18n="form.tourPh">— выберите тур —</option>
+              <option value="t1" data-i18n="form.o1">Байконур: запуск, 1 день — от 150 000 ₸</option>
+              <option value="t2" data-i18n="form.o2">Байконур: 3 дня — 300 000–450 000 ₸</option>
+              <option value="t3" data-i18n="form.o3">Байконур: «Буран», 1 день — 100 000 ₸</option>
+              <option value="t4" data-i18n="form.o4">Корпоратив / группы / MICE</option>
+              <option value="t5" data-i18n="form.o5">Весь Казахстан под запрос</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="fDate" data-i18n="form.date">Дата (необязательно)</label>
+              <input type="text" id="fDate" name="date" inputmode="numeric" data-i18n-placeholder="form.datePh" placeholder="например, 09.09.2026">
+            </div>
+            <div class="field">
+              <label for="fPax" data-i18n="form.pax">Человек (необязательно)</label>
+              <input type="number" id="fPax" name="pax" min="1" max="500" data-i18n-placeholder="form.paxPh" placeholder="2">
+            </div>
+          </div>
+
+          <p class="form-error" id="formError" hidden data-i18n="form.err">Пожалуйста, укажите имя и выберите тур</p>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="wa-ico"><path d="M12 2a9.9 9.9 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.6 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.8Z"/></svg>
+            <span data-i18n="form.btn">Отправить в WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section section-dark section-contacts" id="contacts">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="ct.kicker">Контакты</p>
+        <h2 class="section-title reveal" data-i18n="ct.title">Связь с Землёй — на связи 7 дней в неделю</h2>
+
+        <div class="contacts-grid">
+          <a class="contact-card reveal" href="https://wa.me/77760909818" target="_blank" rel="noopener">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">+7 776 090 9818</span>
+            <span class="contact-hint" data-i18n="ct.waHint">Отвечаем быстрее всего</span>
+          </a>
+          <a class="contact-card reveal" href="mailto:travelHub@list.ru">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">travelHub@list.ru</span>
+            <span class="contact-hint" data-i18n="ct.emHint">Для агентств и туроператоров</span>
+          </a>
+          <div class="contact-card reveal">
+            <span class="contact-label" data-i18n="ct.cityL">Офис</span>
+            <span class="contact-value" data-i18n="ct.cityV">Астана, Казахстан</span>
+            <span class="contact-hint" data-i18n="ct.cityHint">Принимаем туристов по всей стране</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= ФУТЕР ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-pill"><img src="assets/logo.png" alt="TravelHub" width="40" height="40" loading="lazy"></span>
+        <p class="footer-slogan" data-i18n="ft.slogan">Байконур — наша специализация. Весь Казахстан — наша территория.</p>
+      </div>
+      <p class="footer-legal">
+        <span data-i18n="ft.company">ТОО «TravelHub» · БИН 240640028614 · Астана, Казахстан</span><br>
+        <span data-i18n="ft.license">Лицензия туроператора № 26004458 от 13.02.2026 · въездной и внутренний туризм</span>
+      </p>
+      <p class="footer-copy">© 2026 TravelHub · <span data-i18n="ft.rights">Все права защищены</span></p>
+    </div>
+  </footer>
+
+  <!-- Липкая кнопка WhatsApp -->
+  <a class="wa-fab" data-wa="fab" href="https://wa.me/77760909818" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-i18n-aria="wa.fab">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.6 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.8Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
