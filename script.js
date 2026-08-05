@@ -1,5 +1,5 @@
 /* ============================================================
-   TravelHub — Байконур · логика лэндинга
+   TravelHub - Байконур · логика лэндинга
    i18n (RU/EN/中文) · starfield · countdown · reveal · форма → WhatsApp
    ============================================================ */
 'use strict';
@@ -12,13 +12,13 @@ window.addEventListener('load', function () {
 });
 
 /* ============================================================
-   1. СЛОВАРЬ ПЕРЕВОДОВ — все видимые строки на 3 языках
+   1. СЛОВАРЬ ПЕРЕВОДОВ - все видимые строки на 3 языках
    ============================================================ */
 var I18N = {
   /* ---------------- РУССКИЙ ---------------- */
   ru: {
-    'meta.title': 'TravelHub — туры на запуск ракеты с Байконура | Туроператор Казахстана',
-    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1–3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения.',
+    'meta.title': 'TravelHub - туры на запуск ракеты с Байконура | Туроператор Казахстана',
+    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения.',
 
     'nav.aria': 'Основная навигация',
     'nav.burger': 'Открыть меню',
@@ -35,10 +35,10 @@ var I18N = {
     'hero.title1': 'Старт ракеты.',
     'hero.title2': 'Вживую.',
     'hero.title3': 'С Байконура.',
-    'hero.sub': 'Байконур — наша специализация. Весь Казахстан — наша территория.',
+    'hero.sub': 'Байконур - наша специализация. Весь Казахстан - наша территория.',
     'hero.cta1': 'Забронировать тур',
     'hero.cta2': 'Смотреть туры',
-    'hero.next': 'До ближайшего пуска — Союз / Прогресс МС-35',
+    'hero.next': 'До ближайшего пуска - Союз / Прогресс МС-35',
     'hero.datenote': 'Дата уточняется по графику Роскосмоса',
     'cd.days': 'дней',
     'cd.hours': 'часов',
@@ -54,12 +54,12 @@ var I18N = {
     'btn.book': 'Забронировать',
 
     't1.name': 'Байконур: наблюдение запуска, 1 день',
-    't1.desc': 'Экспедиция к легендарному космодрому в день пуска. Грохот двигателей, пламя и дрожь земли — с ближайшей безопасной точки.',
+    't1.desc': 'Экспедиция к легендарному космодрому в день пуска. Грохот двигателей, пламя и дрожь земли - с ближайшей безопасной точки.',
     't1.inc': 'Трансферы · гид · пропуска · точка наблюдения',
     't2.name': 'Байконур: расширенная программа, 3 дня',
     't2.desc': 'Полное погружение: вывоз ракеты, Гагаринский старт, музеи и сам запуск. Три дня внутри живой космической истории.',
     't2.inc': 'Отель · завтраки · трансферы · гид · пропуска',
-    't2.note': 'Пилотируемый пуск — 450 000 ₸ · беспилотный — от 300 000 ₸',
+    't2.note': 'Пилотируемый пуск - 450 000 ₸ · беспилотный - от 300 000 ₸',
     't3.name': 'Байконур: тур «Буран», 1 день',
     't3.desc': 'Легендарный корабль «Буран» и ракета «Энергия-М» в монтажно-испытательном корпусе. Плюс музей космонавтики.',
     't3.inc': 'Трансферы · гид · пропуска · музей',
@@ -71,15 +71,15 @@ var I18N = {
     't5.inc': 'Индивидуальная программа · расчёт стоимости · организация на месте',
 
     'custom.title': 'Не нашли нужный маршрут?',
-    'custom.text': 'Расскажите, какой Казахстан хотят увидеть ваши туристы — мы разработаем программу под запрос, рассчитаем стоимость и организуем поездку на месте.',
+    'custom.text': 'Расскажите, какой Казахстан хотят увидеть ваши туристы - мы разработаем программу под запрос, рассчитаем стоимость и организуем поездку на месте.',
     'custom.cta': 'Обсудить программу',
 
     'route.kicker': 'Маршрут тура на Байконур',
     'route.title': '7 точек одного большого дня',
-    'route.sub': 'От степного мемориала — до огня стартующей ракеты',
+    'route.sub': 'От степного мемориала - до огня стартующей ракеты',
     'route.p1': 'Мемориал Коркыт Ата',
     'route.p2': 'Беседка Гагарина',
-    'route.p3': 'Гагаринский старт — Площадка №1',
+    'route.p3': 'Гагаринский старт - Площадка №1',
     'route.p4': 'Наблюдение запуска ракеты',
     'route.p5': 'Ракета «Энергия-М»',
     'route.p6': 'Космический корабль «Буран»',
@@ -87,7 +87,7 @@ var I18N = {
     'route.imgalt': 'Карта маршрута тура на Байконур: 7 точек от мемориала Коркыт Ата до музея космонавтики',
 
     'inc.kicker': 'Всё уже включено',
-    'inc.title': 'Вы наблюдаете запуск — остальное делаем мы',
+    'inc.title': 'Вы наблюдаете запуск - остальное делаем мы',
     'inc.i1': 'Гиды-переводчики: русский, английский, китайский',
     'inc.i2': 'Проживание в отелях',
     'inc.i3': 'Завтраки',
@@ -97,19 +97,19 @@ var I18N = {
     'inc.i7': 'Оформление пропусков и вся логистика',
 
     'why.kicker': 'Почему TravelHub',
-    'why.title': 'Космос — это серьёзно. Мы тоже.',
+    'why.title': 'Космос - это серьёзно. Мы тоже.',
     'why.w1t': 'Ближайшие точки наблюдения',
-    'why.w1x': 'Смотрите старт с ближайших безопасных площадок — максимум эмоций без компромиссов.',
+    'why.w1x': 'Смотрите старт с ближайших безопасных площадок - максимум эмоций без компромиссов.',
     'why.w2t': 'Лицензированный туроператор РК',
     'why.w2x': 'Официальная лицензия на въездной и внутренний туризм. Работаем прозрачно и по договору.',
-    'why.w3t': 'Пропуска и логистика — на нас',
-    'why.w3x': 'Космодром — режимный объект. Все разрешения, пропуска и трансферы оформляем сами.',
+    'why.w3t': 'Пропуска и логистика - на нас',
+    'why.w3x': 'Космодром - режимный объект. Все разрешения, пропуска и трансферы оформляем сами.',
     'why.w4t': 'Профессиональные гиды',
-    'why.w4x': 'Знают Байконур изнутри и рассказывают о космосе так, что мурашки — до старта.',
+    'why.w4x': 'Знают Байконур изнутри и рассказывают о космосе так, что мурашки - до старта.',
     'why.w5t': '100% возврат',
-    'why.w5x': 'Пуск отменён или перенесён — вернём деньги полностью либо перенесём вашу поездку.',
+    'why.w5x': 'Пуск отменён или перенесён - вернём деньги полностью либо перенесём вашу поездку.',
     'why.w6t': 'Специализация + территория',
-    'why.w6x': 'Байконур — наша специализация. Весь Казахстан — наша территория.',
+    'why.w6x': 'Байконур - наша специализация. Весь Казахстан - наша территория.',
 
     'gal.a1': 'Стартовый комплекс космодрома Байконур',
     'gal.c1': 'Стартовый комплекс, Байконур',
@@ -137,11 +137,11 @@ var I18N = {
     'sch.l2n': 'Союз-2.1а · Прогресс МС-36',
     'sch.l2x': 'Грузовой корабль к МКС · открыто бронирование',
     'sch.open': 'бронирование открыто',
-    'sch.note': 'Даты пусков уточняются по графику Роскосмоса — подтвердим при бронировании.',
+    'sch.note': 'Даты пусков уточняются по графику Роскосмоса - подтвердим при бронировании.',
 
     'bk.kicker': 'Заявка за 30 секунд',
     'bk.title': 'Забронируйте место у стартового стола',
-    'bk.sub': 'Заполните форму — заявка откроется в WhatsApp, мы ответим быстро. Никаких данных на сервер не отправляем.',
+    'bk.sub': 'Заполните форму - заявка откроется в WhatsApp, мы ответим быстро. Никаких данных на сервер не отправляем.',
     'bk.p1': 'Ответ в WhatsApp в течение рабочего дня',
     'bk.p2': 'Поможем выбрать дату под ближайший пуск',
     'bk.p3': '100% возврат при отмене или переносе пуска',
@@ -149,10 +149,10 @@ var I18N = {
     'form.name': 'Ваше имя',
     'form.namePh': 'Как к вам обращаться',
     'form.tour': 'Тур',
-    'form.tourPh': '— выберите тур —',
-    'form.o1': 'Байконур: запуск, 1 день — от 150 000 ₸',
-    'form.o2': 'Байконур: 3 дня — 300 000–450 000 ₸',
-    'form.o3': 'Байконур: «Буран», 1 день — 100 000 ₸',
+    'form.tourPh': '- выберите тур -',
+    'form.o1': 'Байконур: запуск, 1 день - от 150 000 ₸',
+    'form.o2': 'Байконур: 3 дня - 300 000-450 000 ₸',
+    'form.o3': 'Байконур: «Буран», 1 день - 100 000 ₸',
     'form.o4': 'Корпоратив / группы / MICE',
     'form.o5': 'Весь Казахстан под запрос',
     'form.date': 'Дата (необязательно)',
@@ -163,23 +163,23 @@ var I18N = {
     'form.btn': 'Отправить в WhatsApp',
 
     'ct.kicker': 'Контакты',
-    'ct.title': 'Связь с Землёй — на связи 7 дней в неделю',
+    'ct.title': 'Связь с Землёй - на связи 7 дней в неделю',
     'ct.waHint': 'Отвечаем быстрее всего',
     'ct.emHint': 'Для агентств и туроператоров',
     'ct.cityL': 'Офис',
     'ct.cityV': 'Астана, Казахстан',
     'ct.cityHint': 'Принимаем туристов по всей стране',
 
-    'ft.slogan': 'Байконур — наша специализация. Весь Казахстан — наша территория.',
+    'ft.slogan': 'Байконур - наша специализация. Весь Казахстан - наша территория.',
     'ft.company': 'ТОО «TravelHub» · БИН 240640028614 · Астана, Казахстан',
     'ft.license': 'Лицензия туроператора № 26004458 от 13.02.2026 · въездной и внутренний туризм',
     'ft.rights': 'Все права защищены',
 
     'wa.fab': 'Написать в WhatsApp',
     /* Предзаполненные сообщения WhatsApp */
-    'wa.t1': 'Здравствуйте! Интересует тур: Байконур — наблюдение запуска, 1 день',
-    'wa.t2': 'Здравствуйте! Интересует тур: Байконур — расширенная программа, 3 дня',
-    'wa.t3': 'Здравствуйте! Интересует тур: Байконур — «Буран», 1 день',
+    'wa.t1': 'Здравствуйте! Интересует тур: Байконур - наблюдение запуска, 1 день',
+    'wa.t2': 'Здравствуйте! Интересует тур: Байконур - расширенная программа, 3 дня',
+    'wa.t3': 'Здравствуйте! Интересует тур: Байконур - «Буран», 1 день',
     'wa.t4': 'Здравствуйте! Интересует корпоративный тур / приём группы (MICE)',
     'wa.t5': 'Здравствуйте! Интересует индивидуальный тур по Казахстану',
     'wa.custom': 'Здравствуйте! Хотим обсудить индивидуальную программу по Казахстану',
@@ -192,8 +192,8 @@ var I18N = {
 
   /* ---------------- ENGLISH ---------------- */
   en: {
-    'meta.title': 'TravelHub — Baikonur Rocket Launch Tours | Kazakhstan Tour Operator',
-    'meta.desc': 'Watch a real rocket launch from Baikonur: 1–3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, closest safe viewing points.',
+    'meta.title': 'TravelHub - Baikonur Rocket Launch Tours | Kazakhstan Tour Operator',
+    'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, closest safe viewing points.',
 
     'nav.aria': 'Main navigation',
     'nav.burger': 'Open menu',
@@ -213,7 +213,7 @@ var I18N = {
     'hero.sub': 'Baikonur is our specialty. All of Kazakhstan is our territory.',
     'hero.cta1': 'Book a tour',
     'hero.cta2': 'See the tours',
-    'hero.next': 'Next launch — Soyuz / Progress MS-35',
+    'hero.next': 'Next launch - Soyuz / Progress MS-35',
     'hero.datenote': 'Date subject to Roscosmos schedule updates',
     'cd.days': 'days',
     'cd.hours': 'hours',
@@ -229,12 +229,12 @@ var I18N = {
     'btn.book': 'Book now',
 
     't1.name': 'Baikonur: launch viewing, 1 day',
-    't1.desc': 'An expedition to the legendary cosmodrome on launch day. The roar of engines, the flame and the trembling ground — from the closest safe viewpoint.',
+    't1.desc': 'An expedition to the legendary cosmodrome on launch day. The roar of engines, the flame and the trembling ground - from the closest safe viewpoint.',
     't1.inc': 'Transfers · guide · permits · viewing point',
     't2.name': 'Baikonur: extended program, 3 days',
     't2.desc': 'Full immersion: rocket rollout, Gagarin’s Start, museums and the launch itself. Three days inside living space history.',
     't2.inc': 'Hotel · breakfasts · transfers · guide · permits',
-    't2.note': 'Crewed launch — 450,000 ₸ · uncrewed — from 300,000 ₸',
+    't2.note': 'Crewed launch - 450,000 ₸ · uncrewed - from 300,000 ₸',
     't3.name': 'Baikonur: Buran tour, 1 day',
     't3.desc': 'The legendary Buran shuttle and the Energia-M rocket inside the assembly and test facility. Plus the Museum of Cosmonautics.',
     't3.inc': 'Transfers · guide · permits · museum',
@@ -246,7 +246,7 @@ var I18N = {
     't5.inc': 'Custom program · cost estimate · on-site arrangements',
 
     'custom.title': 'Didn’t find the right itinerary?',
-    'custom.text': 'Tell us what kind of Kazakhstan your travelers want to see — we will design a program on request, estimate the cost and arrange everything on the ground.',
+    'custom.text': 'Tell us what kind of Kazakhstan your travelers want to see - we will design a program on request, estimate the cost and arrange everything on the ground.',
     'custom.cta': 'Discuss a program',
 
     'route.kicker': 'Baikonur tour route',
@@ -254,7 +254,7 @@ var I18N = {
     'route.sub': 'From a steppe memorial to the fire of a launching rocket',
     'route.p1': 'Korkyt Ata Memorial',
     'route.p2': 'Gagarin’s Gazebo',
-    'route.p3': 'Gagarin’s Start — Site No. 1',
+    'route.p3': 'Gagarin’s Start - Site No. 1',
     'route.p4': 'Rocket launch viewing',
     'route.p5': 'Energia-M rocket',
     'route.p6': 'Buran space shuttle',
@@ -262,7 +262,7 @@ var I18N = {
     'route.imgalt': 'Baikonur tour route map: 7 stops from the Korkyt Ata Memorial to the Museum of Cosmonautics',
 
     'inc.kicker': 'Everything is included',
-    'inc.title': 'You watch the launch — we handle the rest',
+    'inc.title': 'You watch the launch - we handle the rest',
     'inc.i1': 'Guide-interpreters: Russian, English, Chinese',
     'inc.i2': 'Hotel accommodation',
     'inc.i3': 'Breakfasts',
@@ -274,7 +274,7 @@ var I18N = {
     'why.kicker': 'Why TravelHub',
     'why.title': 'Space is serious business. So are we.',
     'why.w1t': 'Closest viewing points',
-    'why.w1x': 'Watch the launch from the closest safe areas — maximum emotion, no compromises.',
+    'why.w1x': 'Watch the launch from the closest safe areas - maximum emotion, no compromises.',
     'why.w2t': 'Licensed tour operator of Kazakhstan',
     'why.w2x': 'Official license for inbound and domestic tourism. Transparent work under contract.',
     'why.w3t': 'Permits & logistics on us',
@@ -312,11 +312,11 @@ var I18N = {
     'sch.l2n': 'Soyuz-2.1a · Progress MS-36',
     'sch.l2x': 'Cargo ship to the ISS · booking open',
     'sch.open': 'booking open',
-    'sch.note': 'Launch dates follow the Roscosmos schedule and may change — we confirm them at booking.',
+    'sch.note': 'Launch dates follow the Roscosmos schedule and may change - we confirm them at booking.',
 
     'bk.kicker': 'A 30-second request',
     'bk.title': 'Book your place by the launch pad',
-    'bk.sub': 'Fill in the form — your request opens in WhatsApp and we reply fast. No data is sent to any server.',
+    'bk.sub': 'Fill in the form - your request opens in WhatsApp and we reply fast. No data is sent to any server.',
     'bk.p1': 'WhatsApp reply within one business day',
     'bk.p2': 'We will help you pick a date for the next launch',
     'bk.p3': '100% refund if the launch is canceled or postponed',
@@ -324,10 +324,10 @@ var I18N = {
     'form.name': 'Your name',
     'form.namePh': 'How should we address you',
     'form.tour': 'Tour',
-    'form.tourPh': '— choose a tour —',
-    'form.o1': 'Baikonur: launch, 1 day — from 150,000 ₸',
-    'form.o2': 'Baikonur: 3 days — 300,000–450,000 ₸',
-    'form.o3': 'Baikonur: Buran, 1 day — 100,000 ₸',
+    'form.tourPh': '- choose a tour -',
+    'form.o1': 'Baikonur: launch, 1 day - from 150,000 ₸',
+    'form.o2': 'Baikonur: 3 days - 300,000-450,000 ₸',
+    'form.o3': 'Baikonur: Buran, 1 day - 100,000 ₸',
     'form.o4': 'Corporate / groups / MICE',
     'form.o5': 'All of Kazakhstan, tailor-made',
     'form.date': 'Date (optional)',
@@ -338,7 +338,7 @@ var I18N = {
     'form.btn': 'Send via WhatsApp',
 
     'ct.kicker': 'Contacts',
-    'ct.title': 'Ground control — online 7 days a week',
+    'ct.title': 'Ground control - online 7 days a week',
     'ct.waHint': 'The fastest way to reach us',
     'ct.emHint': 'For agencies and tour operators',
     'ct.cityL': 'Office',
@@ -366,7 +366,7 @@ var I18N = {
 
   /* ---------------- 中文（简体） ---------------- */
   zh: {
-    'meta.title': 'TravelHub — 拜科努尔火箭发射观摩之旅 | 哈萨克斯坦旅游运营商',
+    'meta.title': 'TravelHub - 拜科努尔火箭发射观摩之旅 | 哈萨克斯坦旅游运营商',
     'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，100 000 ₸ 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，最近的安全观测点。',
 
     'nav.aria': '主导航',
@@ -387,7 +387,7 @@ var I18N = {
     'hero.sub': '拜科努尔是我们的专长，整个哈萨克斯坦是我们的天地。',
     'hero.cta1': '预订行程',
     'hero.cta2': '浏览线路',
-    'hero.next': '距最近一次发射 — 联盟号 / 进步MS-35',
+    'hero.next': '距最近一次发射 - 联盟号 / 进步MS-35',
     'hero.datenote': '具体日期以俄罗斯航天集团发射计划为准',
     'cd.days': '天',
     'cd.hours': '时',
@@ -408,7 +408,7 @@ var I18N = {
     't2.name': '拜科努尔：深度三日游',
     't2.desc': '全方位沉浸体验：火箭转运、加加林发射台、博物馆以及发射本身。三天置身鲜活的航天历史之中。',
     't2.inc': '酒店 · 早餐 · 接送 · 导游 · 通行证',
-    't2.note': '载人发射 — 450 000 ₸ · 无人发射 — 300 000 ₸ 起',
+    't2.note': '载人发射 - 450 000 ₸ · 无人发射 - 300 000 ₸ 起',
     't3.name': '拜科努尔：“暴风雪号”一日游',
     't3.desc': '在总装测试厂房近距离参观传奇的“暴风雪号”航天飞机与“能源-M”运载火箭，并游览航天博物馆。',
     't3.inc': '接送 · 导游 · 通行证 · 博物馆',
@@ -420,7 +420,7 @@ var I18N = {
     't5.inc': '个性化行程 · 费用核算 · 当地落地安排',
 
     'custom.title': '没有找到合适的路线？',
-    'custom.text': '告诉我们您的游客想看到怎样的哈萨克斯坦——我们将按需求设计行程、核算费用，并负责当地的全部落地安排。',
+    'custom.text': '告诉我们您的游客想看到怎样的哈萨克斯坦--我们将按需求设计行程、核算费用，并负责当地的全部落地安排。',
     'custom.cta': '咨询定制方案',
 
     'route.kicker': '拜科努尔行程路线',
@@ -428,7 +428,7 @@ var I18N = {
     'route.sub': '从草原上的纪念碑，到火箭升空的烈焰',
     'route.p1': '阔尔库特·阿塔纪念碑',
     'route.p2': '加加林凉亭',
-    'route.p3': '加加林发射台 — 1号发射场',
+    'route.p3': '加加林发射台 - 1号发射场',
     'route.p4': '观看火箭发射',
     'route.p5': '“能源-M”运载火箭',
     'route.p6': '“暴风雪号”航天飞机',
@@ -448,7 +448,7 @@ var I18N = {
     'why.kicker': '为什么选择 TravelHub',
     'why.title': '太空容不得马虎，我们也一样。',
     'why.w1t': '最近的观测点',
-    'why.w1x': '在距离最近的安全观测点观看发射——震撼体验，绝不妥协。',
+    'why.w1x': '在距离最近的安全观测点观看发射--震撼体验，绝不妥协。',
     'why.w2t': '哈萨克斯坦持牌旅游运营商',
     'why.w2x': '持有入境游与国内游官方牌照，签订合同，透明经营。',
     'why.w3t': '通行证与后勤全包',
@@ -486,7 +486,7 @@ var I18N = {
     'sch.l2n': '联盟-2.1a · 进步MS-36',
     'sch.l2x': '国际空间站货运飞船 · 已开放预订',
     'sch.open': '开放预订',
-    'sch.note': '发射日期以俄罗斯航天集团计划为准，可能调整——预订时我们会与您确认。',
+    'sch.note': '发射日期以俄罗斯航天集团计划为准，可能调整--预订时我们会与您确认。',
 
     'bk.kicker': '30 秒提交申请',
     'bk.title': '预订您在发射台旁的位置',
@@ -498,10 +498,10 @@ var I18N = {
     'form.name': '您的姓名',
     'form.namePh': '请问如何称呼您',
     'form.tour': '线路',
-    'form.tourPh': '— 请选择线路 —',
-    'form.o1': '拜科努尔：发射一日游 — 150 000 ₸ 起',
-    'form.o2': '拜科努尔：三日游 — 300 000–450 000 ₸',
-    'form.o3': '拜科努尔：“暴风雪号”一日游 — 100 000 ₸',
+    'form.tourPh': '- 请选择线路 -',
+    'form.o1': '拜科努尔：发射一日游 - 150 000 ₸ 起',
+    'form.o2': '拜科努尔：三日游 - 300 000-450 000 ₸',
+    'form.o3': '拜科努尔：“暴风雪号”一日游 - 100 000 ₸',
     'form.o4': '企业团建 / 团队 / MICE',
     'form.o5': '哈萨克斯坦全境定制游',
     'form.date': '日期（选填）',
@@ -512,7 +512,7 @@ var I18N = {
     'form.btn': '通过 WhatsApp 发送',
 
     'ct.kicker': '联系我们',
-    'ct.title': '“地面控制中心”——每周 7 天在线',
+    'ct.title': '“地面控制中心”--每周 7 天在线',
     'ct.waHint': '回复最快的联系方式',
     'ct.emHint': '面向旅行社与旅游运营商',
     'ct.cityL': '办公室',
@@ -620,7 +620,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
 })();
 
 /* ============================================================
-   3. STARFIELD — мерцающие звёзды на canvas + параллакс
+   3. STARFIELD - мерцающие звёзды на canvas + параллакс
    ============================================================ */
 (function starfield() {
   var canvas = document.getElementById('starfield');
@@ -671,7 +671,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
       var offY = scrollFactor * (6 + s.layer * 26);         // параллакс от скролла
       var offX = pointerX * (s.layer * 14);                 // лёгкий параллакс от курсора
       var y = s.y - offY;
-      // звёзды уходят наверх — заворачиваем вниз
+      // звёзды уходят наверх - заворачиваем вниз
       y = ((y % H) + H) % H;
       ctx.globalAlpha = s.a * twinkle;
       ctx.fillStyle = s.layer > 0.85 ? '#ffd9b0' : '#cfe0ff';
@@ -749,7 +749,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
 })();
 
 /* ============================================================
-   4. COUNTDOWN — до ближайшего пуска
+   4. COUNTDOWN - до ближайшего пуска
    ============================================================ */
 (function countdown() {
   var elD = document.getElementById('cdD'),
@@ -792,7 +792,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
 })();
 
 /* ============================================================
-   5. SCROLL-REVEAL — плавное появление секций
+   5. SCROLL-REVEAL - плавное появление секций
    ============================================================ */
 (function reveal() {
   var items = document.querySelectorAll('.reveal');
@@ -883,7 +883,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
     }
     errEl.hidden = true;
 
-    // Название выбранного тура — на текущем языке
+    // Название выбранного тура - на текущем языке
     var tourLabel = t('form.o' + tour.slice(1));
 
     // Собираем сообщение на текущем языке
