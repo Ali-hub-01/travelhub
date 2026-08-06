@@ -1,11 +1,11 @@
 /* ============================================================
    TravelHub - Байконур · логика лэндинга
-   i18n (RU/EN/中文) · starfield · countdown · reveal · форма → WhatsApp
+   i18n (RU/EN/中文) · starfield · countdown · reveal · lightbox
+   форма → WhatsApp
    ============================================================ */
 'use strict';
 
-/* ---------- Мобильный фикс: страница всегда открывается сверху,
-   но прямые якоря из рекламы (#tour-1day и т.п.) сохраняются ---------- */
+/* Страница всегда открывается сверху, но прямые якоря из рекламы (#tour-1day) сохраняются */
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.addEventListener('load', function () {
   if (!location.hash) window.scrollTo(0, 0);
@@ -18,13 +18,15 @@ var I18N = {
   /* ---------------- РУССКИЙ ---------------- */
   ru: {
     'meta.title': 'TravelHub - туры на запуск ракеты с Байконура | Туроператор Казахстана',
-    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения.',
+    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения. Туры по всему Казахстану: Мангистау, горы Алматы, Астана.',
 
     'nav.aria': 'Основная навигация',
     'nav.burger': 'Открыть меню',
     'lang.aria': 'Выбор языка',
+    'nav.regions': 'Казахстан',
     'nav.tours': 'Туры',
     'nav.route': 'Маршрут',
+    'nav.video': 'Видео',
     'nav.included': 'Что включено',
     'nav.why': 'Почему мы',
     'nav.schedule': 'Пуски',
@@ -44,6 +46,27 @@ var I18N = {
     'cd.hours': 'часов',
     'cd.min': 'минут',
     'cd.sec': 'секунд',
+
+    'reg.kicker': 'А ещё - весь Казахстан',
+    'reg.title': 'Возим по всей стране',
+    'reg.sub': 'Байконур - главное направление. Но Казахстан огромен: марсианские плато, снежные горы и футуристичные города.',
+    'reg.almaty': 'Алматы',
+    'reg.almatyX': 'Горы, озёра, каньоны',
+    'reg.altAlmaty': 'Горные вершины и озёра Алматы',
+    'reg.bozzhyra': 'Мангистау · Бозжыра',
+    'reg.bozzhyraX': 'Марсианские плато',
+    'reg.altBozzhyra': 'Плато Бозжыра, скалы-клыки в степи Мангистау',
+    'reg.astana': 'Астана',
+    'reg.astanaX': 'Байтерек ночью',
+    'reg.altAstana': 'Монумент Байтерек, ночная Астана',
+    'reg.astana2': 'Скайлайн столицы',
+    'reg.astana2X': 'Город будущего',
+    'reg.altAstana2': 'Футуристичный скайлайн Астаны',
+    'reg.mangystau': 'Мангистау',
+    'reg.mangystauX': 'Каньоны и Каспий',
+    'reg.altMangystau': 'Меловые каньоны и степь Мангистау',
+    'reg.ctaText': 'Разрабатываем индивидуальные программы по всему Казахстану по запросу.',
+    'reg.cta': 'Обсудить маршрут',
 
     'tours.kicker': 'Туры и цены',
     'tours.title': 'Выберите свою космическую программу',
@@ -86,6 +109,15 @@ var I18N = {
     'route.p7': 'Музей космонавтики',
     'route.imgalt': 'Карта маршрута тура на Байконур: 7 точек от мемориала Коркыт Ата до музея космонавтики',
 
+    'vid.kicker': 'Живое видео с наших туров',
+    'vid.title': 'Так это выглядит вживую',
+    'vid.sub': 'Наши туристы наблюдают пуск ракеты на закате - настоящее видео, снятое на туре TravelHub, без монтажа.',
+    'vid.p1': 'Реальные кадры с ближайшей безопасной точки',
+    'vid.p2': 'Пламя, грохот и дрожь земли - без спецэффектов',
+    'vid.p3': 'Именно это вы увидите на нашем туре',
+    'vid.caption': 'Пуск на закате · тур TravelHub, Байконур',
+    'vid.videoAria': 'Видео запуска ракеты на Байконуре с тура TravelHub',
+
     'inc.kicker': 'Всё уже включено',
     'inc.title': 'Вы наблюдаете запуск - остальное делаем мы',
     'inc.i1': 'Гиды-переводчики: русский, английский, китайский',
@@ -115,9 +147,15 @@ var I18N = {
     'gal.c1': 'Стартовый комплекс, Байконур',
     'gal.a2': 'Ракета «Энергия-М» в монтажно-испытательном корпусе Байконура',
     'gal.c2': 'Ракета «Энергия-М», МИК',
+    'gal.a3': 'Космический корабль «Буран» в монтажном корпусе Байконура',
+    'gal.c3': 'Корабль «Буран», монтажный корпус',
 
     'lic.kicker': 'Работаем официально',
-    'lic.title': 'Лицензированный туроператор Республики Казахстан',
+    'lic.title': 'Настоящая лицензия туроператора РК',
+    'lic.short': 'Лицензия туроператора № 26004458 от 13.02.2026, ТОО «TravelHub», въездной и внутренний туризм.',
+    'lic.alt': 'Первая страница государственной лицензии туроператора TravelHub',
+    'lic.zoom': 'Нажмите, чтобы увеличить',
+    'lic.zoomAria': 'Открыть лицензию крупно',
     'lic.numL': 'Лицензия туроператора',
     'lic.typeL': 'Вид деятельности',
     'lic.typeV': 'Въездной и внутренний туризм',
@@ -176,7 +214,7 @@ var I18N = {
     'ft.rights': 'Все права защищены',
 
     'wa.fab': 'Написать в WhatsApp',
-    /* Предзаполненные сообщения WhatsApp */
+    'lb.close': 'Закрыть',
     'wa.t1': 'Здравствуйте! Интересует тур: Байконур - наблюдение запуска, 1 день',
     'wa.t2': 'Здравствуйте! Интересует тур: Байконур - расширенная программа, 3 дня',
     'wa.t3': 'Здравствуйте! Интересует тур: Байконур - «Буран», 1 день',
@@ -193,13 +231,15 @@ var I18N = {
   /* ---------------- ENGLISH ---------------- */
   en: {
     'meta.title': 'TravelHub - Baikonur Rocket Launch Tours | Kazakhstan Tour Operator',
-    'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, closest safe viewing points.',
+    'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, closest safe viewing points. Tours across Kazakhstan: Mangystau, Almaty mountains, Astana.',
 
     'nav.aria': 'Main navigation',
     'nav.burger': 'Open menu',
     'lang.aria': 'Language selection',
+    'nav.regions': 'Kazakhstan',
     'nav.tours': 'Tours',
     'nav.route': 'Route',
+    'nav.video': 'Video',
     'nav.included': 'What’s included',
     'nav.why': 'Why us',
     'nav.schedule': 'Launches',
@@ -219,6 +259,27 @@ var I18N = {
     'cd.hours': 'hours',
     'cd.min': 'minutes',
     'cd.sec': 'seconds',
+
+    'reg.kicker': 'And also - all of Kazakhstan',
+    'reg.title': 'We travel the whole country',
+    'reg.sub': 'Baikonur is our main direction. But Kazakhstan is vast: Martian plateaus, snow-capped mountains and futuristic cities.',
+    'reg.almaty': 'Almaty',
+    'reg.almatyX': 'Mountains, lakes, canyons',
+    'reg.altAlmaty': 'Mountain peaks and lakes near Almaty',
+    'reg.bozzhyra': 'Mangystau · Bozzhyra',
+    'reg.bozzhyraX': 'Martian plateaus',
+    'reg.altBozzhyra': 'Bozzhyra plateau, fang-shaped cliffs in the Mangystau steppe',
+    'reg.astana': 'Astana',
+    'reg.astanaX': 'Baiterek at night',
+    'reg.altAstana': 'Baiterek monument, Astana at night',
+    'reg.astana2': 'Capital skyline',
+    'reg.astana2X': 'City of the future',
+    'reg.altAstana2': 'Futuristic skyline of Astana',
+    'reg.mangystau': 'Mangystau',
+    'reg.mangystauX': 'Canyons and the Caspian',
+    'reg.altMangystau': 'Chalk canyons and steppe of Mangystau',
+    'reg.ctaText': 'We design custom programs across all of Kazakhstan on request.',
+    'reg.cta': 'Discuss a route',
 
     'tours.kicker': 'Tours & prices',
     'tours.title': 'Choose your space program',
@@ -261,6 +322,15 @@ var I18N = {
     'route.p7': 'Museum of Cosmonautics',
     'route.imgalt': 'Baikonur tour route map: 7 stops from the Korkyt Ata Memorial to the Museum of Cosmonautics',
 
+    'vid.kicker': 'Live footage from our tours',
+    'vid.title': 'This is what it looks like for real',
+    'vid.sub': 'Our travelers watch a rocket launch at sunset - real footage filmed on a TravelHub tour, unedited.',
+    'vid.p1': 'Real footage from the closest safe point',
+    'vid.p2': 'Flame, roar and trembling ground - no special effects',
+    'vid.p3': 'This is exactly what you will see on our tour',
+    'vid.caption': 'Launch at sunset · TravelHub tour, Baikonur',
+    'vid.videoAria': 'Video of a rocket launch at Baikonur from a TravelHub tour',
+
     'inc.kicker': 'Everything is included',
     'inc.title': 'You watch the launch - we handle the rest',
     'inc.i1': 'Guide-interpreters: Russian, English, Chinese',
@@ -290,9 +360,15 @@ var I18N = {
     'gal.c1': 'Launch complex, Baikonur',
     'gal.a2': 'Energia-M rocket inside the Baikonur assembly and test facility',
     'gal.c2': 'Energia-M rocket, assembly facility',
+    'gal.a3': 'Buran space shuttle inside the Baikonur assembly building',
+    'gal.c3': 'Buran shuttle, assembly building',
 
     'lic.kicker': 'Fully licensed',
-    'lic.title': 'Licensed tour operator of the Republic of Kazakhstan',
+    'lic.title': 'A genuine Kazakhstan tour operator license',
+    'lic.short': 'Tour operator license No. 26004458 dated 13.02.2026, TravelHub LLP, inbound and domestic tourism.',
+    'lic.alt': 'First page of the state tour operator license of TravelHub',
+    'lic.zoom': 'Click to enlarge',
+    'lic.zoomAria': 'Open the license enlarged',
     'lic.numL': 'Tour operator license',
     'lic.typeL': 'Activity',
     'lic.typeV': 'Inbound and domestic tourism',
@@ -351,6 +427,7 @@ var I18N = {
     'ft.rights': 'All rights reserved',
 
     'wa.fab': 'Message us on WhatsApp',
+    'lb.close': 'Close',
     'wa.t1': 'Hello! I’m interested in the tour: Baikonur launch viewing, 1 day',
     'wa.t2': 'Hello! I’m interested in the tour: Baikonur extended program, 3 days',
     'wa.t3': 'Hello! I’m interested in the tour: Baikonur Buran tour, 1 day',
@@ -367,13 +444,15 @@ var I18N = {
   /* ---------------- 中文（简体） ---------------- */
   zh: {
     'meta.title': 'TravelHub - 拜科努尔火箭发射观摩之旅 | 哈萨克斯坦旅游运营商',
-    'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，100 000 ₸ 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，最近的安全观测点。',
+    'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，100 000 ₸ 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，最近的安全观测点。畅游哈萨克斯坦全境：曼格斯套、阿拉木图雪山、阿斯塔纳。',
 
     'nav.aria': '主导航',
     'nav.burger': '打开菜单',
     'lang.aria': '语言选择',
+    'nav.regions': '哈萨克斯坦',
     'nav.tours': '线路',
     'nav.route': '行程',
+    'nav.video': '视频',
     'nav.included': '费用包含',
     'nav.why': '选择我们',
     'nav.schedule': '发射日程',
@@ -393,6 +472,27 @@ var I18N = {
     'cd.hours': '时',
     'cd.min': '分',
     'cd.sec': '秒',
+
+    'reg.kicker': '不只拜科努尔 - 畅游全境',
+    'reg.title': '带您走遍哈萨克斯坦',
+    'reg.sub': '拜科努尔是我们的主打线路，但哈萨克斯坦幅员辽阔：火星般的高原、雪山与未来之城。',
+    'reg.almaty': '阿拉木图',
+    'reg.almatyX': '雪山、湖泊、峡谷',
+    'reg.altAlmaty': '阿拉木图的雪山群峰与湖泊',
+    'reg.bozzhyra': '曼格斯套 · 博兹吉拉',
+    'reg.bozzhyraX': '火星般的高原',
+    'reg.altBozzhyra': '曼格斯套草原上的博兹吉拉高原尖峰',
+    'reg.astana': '阿斯塔纳',
+    'reg.astanaX': '夜色中的巴伊杰列克塔',
+    'reg.altAstana': '夜幕下的阿斯塔纳巴伊杰列克观景塔',
+    'reg.astana2': '首都天际线',
+    'reg.astana2X': '未来之城',
+    'reg.altAstana2': '阿斯塔纳未来感十足的天际线',
+    'reg.mangystau': '曼格斯套',
+    'reg.mangystauX': '峡谷与里海',
+    'reg.altMangystau': '曼格斯套的白垩峡谷与草原',
+    'reg.ctaText': '我们按需为您定制贯穿哈萨克斯坦全境的专属行程。',
+    'reg.cta': '咨询路线',
 
     'tours.kicker': '线路与价格',
     'tours.title': '选择您的太空之旅',
@@ -435,6 +535,15 @@ var I18N = {
     'route.p7': '航天博物馆',
     'route.imgalt': '拜科努尔行程路线图：从阔尔库特·阿塔纪念碑到航天博物馆的七个站点',
 
+    'vid.kicker': '来自我们旅程的实拍视频',
+    'vid.title': '这就是现场的真实景象',
+    'vid.sub': '我们的游客在日落时分观看火箭发射--由 TravelHub 旅程实地拍摄，未经剪辑。',
+    'vid.p1': '在最近的安全观测点实地拍摄',
+    'vid.p2': '烈焰、轰鸣与大地震颤--绝无特效',
+    'vid.p3': '这正是您在我们旅程中将看到的景象',
+    'vid.caption': '日落发射 · TravelHub 旅程，拜科努尔',
+    'vid.videoAria': 'TravelHub 旅程中拍摄的拜科努尔火箭发射视频',
+
     'inc.kicker': '费用全包',
     'inc.title': '您只管观看发射，其余交给我们',
     'inc.i1': '俄语、英语、中文导游翻译',
@@ -464,9 +573,15 @@ var I18N = {
     'gal.c1': '拜科努尔发射工位',
     'gal.a2': '总装测试厂房中的“能源-M”运载火箭',
     'gal.c2': '“能源-M”火箭 · 总装厂房',
+    'gal.a3': '拜科努尔总装厂房中的“暴风雪号”航天飞机',
+    'gal.c3': '“暴风雪号”航天飞机 · 总装厂房',
 
     'lic.kicker': '正规持牌经营',
-    'lic.title': '哈萨克斯坦共和国持牌旅游运营商',
+    'lic.title': '真实的哈萨克斯坦旅游运营商牌照',
+    'lic.short': '旅游运营商牌照 № 26004458，2026年2月13日颁发，TravelHub 有限责任公司，入境游与国内游。',
+    'lic.alt': 'TravelHub 国家旅游运营商牌照首页',
+    'lic.zoom': '点击放大查看',
+    'lic.zoomAria': '放大查看牌照',
     'lic.numL': '旅游运营商牌照',
     'lic.typeL': '经营范围',
     'lic.typeV': '入境游与国内游',
@@ -525,6 +640,7 @@ var I18N = {
     'ft.rights': '版权所有',
 
     'wa.fab': '通过 WhatsApp 联系我们',
+    'lb.close': '关闭',
     'wa.t1': '您好！我想咨询：拜科努尔观看火箭发射一日游',
     'wa.t2': '您好！我想咨询：拜科努尔深度三日游',
     'wa.t3': '您好！我想咨询：拜科努尔“暴风雪号”一日游',
@@ -554,46 +670,36 @@ function switchLang(lang) {
   if (!I18N[lang]) lang = 'ru';
   currentLang = lang;
 
-  // Тексты
   document.querySelectorAll('[data-i18n]').forEach(function (el) {
     var key = el.getAttribute('data-i18n');
     if (I18N[lang][key] != null) el.textContent = I18N[lang][key];
   });
-  // Плейсхолдеры
   document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
     var key = el.getAttribute('data-i18n-placeholder');
     if (I18N[lang][key] != null) el.setAttribute('placeholder', I18N[lang][key]);
   });
-  // aria-label
   document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
     var key = el.getAttribute('data-i18n-aria');
     if (I18N[lang][key] != null) el.setAttribute('aria-label', I18N[lang][key]);
   });
-  // alt изображений
   document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
     var key = el.getAttribute('data-i18n-alt');
     if (I18N[lang][key] != null) el.setAttribute('alt', I18N[lang][key]);
   });
 
-  // Язык документа + title + description
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
   document.title = t('meta.title');
   var metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', t('meta.desc'));
 
-  // Подсветка активной кнопки
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 
-  // Предзаполненные WhatsApp-ссылки на текущем языке
   updateWaLinks();
-
-  // Запоминаем выбор
   try { localStorage.setItem('thlang', lang); } catch (e) { /* приватный режим */ }
 }
 
-/* WhatsApp-ссылки: у каждой кнопки data-wa = ключ сообщения */
 function updateWaLinks() {
   document.querySelectorAll('[data-wa]').forEach(function (link) {
     var code = link.getAttribute('data-wa');
@@ -605,14 +711,12 @@ function updateWaLinks() {
   });
 }
 
-/* Кнопки переключения */
 document.querySelectorAll('.lang-btn').forEach(function (btn) {
   btn.addEventListener('click', function () {
     switchLang(btn.getAttribute('data-lang'));
   });
 });
 
-/* Стартовый язык: сохранённый или русский */
 (function initLang() {
   var saved = null;
   try { saved = localStorage.getItem('thlang'); } catch (e) { /* ignore */ }
@@ -620,58 +724,53 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
 })();
 
 /* ============================================================
-   3. STARFIELD - мерцающие звёзды на canvas + параллакс
+   3. STARFIELD - мерцающие звёзды (переиспользуемо)
    ============================================================ */
-(function starfield() {
-  var canvas = document.getElementById('starfield');
+function makeStarfield(canvas, opts) {
   if (!canvas) return;
+  opts = opts || {};
   var ctx = canvas.getContext('2d');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var density = opts.density || 5200;
+  var allowMeteor = opts.meteor !== false;
 
-  var stars = [];
-  var meteor = null;
+  var stars = [], meteor = null;
   var W = 0, H = 0, dpr = 1;
   var running = false, rafId = 0;
   var scrollFactor = 0, pointerX = 0;
 
   function resize() {
-    var hero = canvas.parentElement;
+    var host = canvas.parentElement;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = hero.clientWidth;
-    H = hero.clientHeight;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
+    W = host.clientWidth; H = host.clientHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     buildStars();
-    if (reduceMotion) drawFrame(0); // статичный кадр
+    if (reduceMotion) drawFrame(0);
   }
-
   function buildStars() {
     stars = [];
-    var count = Math.min(240, Math.round((W * H) / 5200));
+    var count = Math.min(240, Math.round((W * H) / density));
     for (var i = 0; i < count; i++) {
       stars.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
+        x: Math.random() * W, y: Math.random() * H,
         r: Math.random() * 1.4 + 0.35,
-        a: Math.random() * 0.55 + 0.25,      // базовая яркость
-        phase: Math.random() * Math.PI * 2,   // фаза мерцания
-        speed: Math.random() * 1.6 + 0.5,     // скорость мерцания
-        layer: Math.random()                  // глубина для параллакса
+        a: Math.random() * 0.55 + 0.25,
+        phase: Math.random() * Math.PI * 2,
+        speed: Math.random() * 1.6 + 0.5,
+        layer: Math.random()
       });
     }
   }
-
   function drawFrame(time) {
     ctx.clearRect(0, 0, W, H);
     var tSec = time / 1000;
     for (var i = 0; i < stars.length; i++) {
       var s = stars[i];
       var twinkle = reduceMotion ? 1 : (0.6 + 0.4 * Math.sin(tSec * s.speed + s.phase));
-      var offY = scrollFactor * (6 + s.layer * 26);         // параллакс от скролла
-      var offX = pointerX * (s.layer * 14);                 // лёгкий параллакс от курсора
+      var offY = scrollFactor * (6 + s.layer * 26);
+      var offX = pointerX * (s.layer * 14);
       var y = s.y - offY;
-      // звёзды уходят наверх - заворачиваем вниз
       y = ((y % H) + H) % H;
       ctx.globalAlpha = s.a * twinkle;
       ctx.fillStyle = s.layer > 0.85 ? '#ffd9b0' : '#cfe0ff';
@@ -679,74 +778,44 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
       ctx.arc(s.x + offX, y, s.r, 0, Math.PI * 2);
       ctx.fill();
     }
-    // редкий «метеор»
-    if (!reduceMotion) {
+    if (!reduceMotion && allowMeteor) {
       if (!meteor && Math.random() < 0.003) {
         meteor = { x: Math.random() * W * 0.8 + W * 0.1, y: Math.random() * H * 0.35, vx: 4 + Math.random() * 3, vy: 2 + Math.random() * 1.5, life: 1 };
       }
       if (meteor) {
-        meteor.x += meteor.vx;
-        meteor.y += meteor.vy;
-        meteor.life -= 0.02;
-        if (meteor.life <= 0 || meteor.x > W || meteor.y > H) {
-          meteor = null;
-        } else {
+        meteor.x += meteor.vx; meteor.y += meteor.vy; meteor.life -= 0.02;
+        if (meteor.life <= 0 || meteor.x > W || meteor.y > H) { meteor = null; }
+        else {
           var grad = ctx.createLinearGradient(meteor.x, meteor.y, meteor.x - meteor.vx * 10, meteor.y - meteor.vy * 10);
           grad.addColorStop(0, 'rgba(255,255,255,' + (0.85 * meteor.life) + ')');
           grad.addColorStop(1, 'rgba(255,255,255,0)');
-          ctx.globalAlpha = 1;
-          ctx.strokeStyle = grad;
-          ctx.lineWidth = 1.6;
-          ctx.beginPath();
-          ctx.moveTo(meteor.x, meteor.y);
-          ctx.lineTo(meteor.x - meteor.vx * 10, meteor.y - meteor.vy * 10);
-          ctx.stroke();
+          ctx.globalAlpha = 1; ctx.strokeStyle = grad; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.moveTo(meteor.x, meteor.y);
+          ctx.lineTo(meteor.x - meteor.vx * 10, meteor.y - meteor.vy * 10); ctx.stroke();
         }
       }
     }
     ctx.globalAlpha = 1;
   }
+  function loop(time) { if (!running) return; drawFrame(time); rafId = requestAnimationFrame(loop); }
+  function start() { if (running || reduceMotion) return; running = true; rafId = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(rafId); }
 
-  function loop(time) {
-    if (!running) return;
-    drawFrame(time);
-    rafId = requestAnimationFrame(loop);
-  }
-
-  function start() {
-    if (running || reduceMotion) return;
-    running = true;
-    rafId = requestAnimationFrame(loop);
-  }
-  function stop() {
-    running = false;
-    cancelAnimationFrame(rafId);
-  }
-
-  // Пауза, когда hero вне вьюпорта / вкладка скрыта
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
       entries[0].isIntersecting ? start() : stop();
     }, { threshold: 0.02 }).observe(canvas.parentElement);
-  } else {
-    start();
-  }
-  document.addEventListener('visibilitychange', function () {
-    document.hidden ? stop() : start();
-  });
+  } else { start(); }
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
 
-  // Параллакс: скролл + курсор (пассивные слушатели)
-  window.addEventListener('scroll', function () {
-    scrollFactor = Math.min(window.scrollY / 600, 2);
-  }, { passive: true });
-  window.addEventListener('pointermove', function (e) {
-    pointerX = (e.clientX / window.innerWidth - 0.5) * 2;
-  }, { passive: true });
-
+  window.addEventListener('scroll', function () { scrollFactor = Math.min(window.scrollY / 600, 2); }, { passive: true });
+  window.addEventListener('pointermove', function (e) { pointerX = (e.clientX / window.innerWidth - 0.5) * 2; }, { passive: true });
   window.addEventListener('resize', resize);
   resize();
   if (reduceMotion) drawFrame(0);
-})();
+}
+makeStarfield(document.getElementById('starfield'), { density: 5200, meteor: true });
+makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: false });
 
 /* ============================================================
    4. COUNTDOWN - до ближайшего пуска
@@ -758,105 +827,124 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
       elS = document.getElementById('cdS');
   if (!elD) return;
 
-  // Пуски: 9 сентября 2026, затем 24 ноября 2026 (даты уточняются)
   var targets = [
     new Date('2026-09-09T00:00:00'),
     new Date('2026-11-24T00:00:00')
   ];
-
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
-
   function tick() {
     var now = Date.now();
     var target = null;
     for (var i = 0; i < targets.length; i++) {
       if (targets[i].getTime() > now) { target = targets[i]; break; }
     }
-    if (!target) { // все пуски прошли
-      elD.textContent = elH.textContent = elM.textContent = elS.textContent = '00';
-      return;
-    }
+    if (!target) { elD.textContent = elH.textContent = elM.textContent = elS.textContent = '00'; return; }
     var diff = Math.floor((target.getTime() - now) / 1000);
-    var d = Math.floor(diff / 86400);
-    var h = Math.floor((diff % 86400) / 3600);
-    var m = Math.floor((diff % 3600) / 60);
-    var s = diff % 60;
-    elD.textContent = pad(d);
-    elH.textContent = pad(h);
-    elM.textContent = pad(m);
-    elS.textContent = pad(s);
+    elD.textContent = pad(Math.floor(diff / 86400));
+    elH.textContent = pad(Math.floor((diff % 86400) / 3600));
+    elM.textContent = pad(Math.floor((diff % 3600) / 60));
+    elS.textContent = pad(diff % 60);
   }
-
   tick();
   setInterval(tick, 1000);
 })();
 
 /* ============================================================
-   5. SCROLL-REVEAL - плавное появление секций
+   5. SCROLL-REVEAL
    ============================================================ */
 (function reveal() {
   var items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
-  // Каскадные задержки внутри сеток
-  ['.tours-grid', '.why-grid', '.included-grid'].forEach(function (sel) {
+  ['.tours-grid', '.why-grid', '.included-grid', '.contacts-grid'].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (grid) {
       Array.prototype.forEach.call(grid.children, function (child, i) {
-        if (child.classList.contains('reveal')) {
-          child.style.setProperty('--d', (i % 6) * 0.07 + 's');
-        }
+        if (child.classList.contains('reveal')) child.style.setProperty('--d', (i % 6) * 0.07 + 's');
       });
     });
   });
 
-  if (!('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
+  if (!('IntersectionObserver' in window)) { items.forEach(function (el) { el.classList.add('in'); }); return; }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   items.forEach(function (el) { io.observe(el); });
 })();
 
 /* ============================================================
-   6. БУРГЕР-МЕНЮ + смус-скролл
+   6. БУРГЕР-МЕНЮ + тень шапки при скролле
    ============================================================ */
 (function menu() {
   var burger = document.getElementById('burgerBtn');
   var nav = document.getElementById('mainNav');
-  if (!burger || !nav) return;
+  var header = document.querySelector('.site-header');
 
-  function setOpen(open) {
-    nav.classList.toggle('open', open);
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (burger && nav) {
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    burger.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+    nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () { setOpen(false); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth >= 900) setOpen(false); });
   }
 
-  burger.addEventListener('click', function () {
-    setOpen(!nav.classList.contains('open'));
-  });
-
-  // Закрываем меню при клике по ссылке (смус-скролл делает CSS scroll-behavior)
-  nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener('click', function () { setOpen(false); });
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') setOpen(false);
-  });
-  window.addEventListener('resize', function () {
-    if (window.innerWidth >= 900) setOpen(false);
-  });
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 })();
 
 /* ============================================================
-   7. ФОРМА ЗАЯВКИ → WhatsApp (без бэкенда)
+   7. ЛАЙТБОКС - лицензия и галерея
+   ============================================================ */
+(function lightbox() {
+  var box = document.getElementById('lightbox');
+  var img = document.getElementById('lightboxImg');
+  var closeBtn = document.getElementById('lightboxClose');
+  if (!box || !img) return;
+
+  var lastFocus = null;
+
+  function open(src, alt) {
+    img.setAttribute('src', src);
+    img.setAttribute('alt', alt || '');
+    box.hidden = false;
+    lastFocus = document.activeElement;
+    requestAnimationFrame(function () { box.classList.add('show'); });
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+  function close() {
+    box.classList.remove('show');
+    document.body.style.overflow = '';
+    setTimeout(function () { box.hidden = true; img.setAttribute('src', ''); }, 280);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-lightbox]').forEach(function (el) {
+    el.style.cursor = 'zoom-in';
+    var trigger = el.closest('[data-lightbox-btn]') || el;
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      open(el.getAttribute('src'), el.getAttribute('alt'));
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lightbox-figure')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
+
+/* ============================================================
+   8. ФОРМА ЗАЯВКИ → WhatsApp
    ============================================================ */
 (function bookingForm() {
   var form = document.getElementById('bookingForm');
@@ -869,11 +957,9 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-
     var name = nameEl.value.trim();
     var tour = tourEl.value;
 
-    // Базовая валидация: имя + тур обязательны
     nameEl.classList.toggle('invalid', !name);
     tourEl.classList.toggle('invalid', !tour);
     if (!name || !tour) {
@@ -883,10 +969,7 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
     }
     errEl.hidden = true;
 
-    // Название выбранного тура - на текущем языке
     var tourLabel = t('form.o' + tour.slice(1));
-
-    // Собираем сообщение на текущем языке
     var lines = [
       t('wa.hello'),
       t('wa.fName') + ': ' + name,
@@ -898,7 +981,6 @@ document.querySelectorAll('.lang-btn').forEach(function (btn) {
     window.open(WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
   });
 
-  // Снимаем ошибку при вводе
   [nameEl, tourEl].forEach(function (el) {
     el.addEventListener('input', function () {
       el.classList.remove('invalid');

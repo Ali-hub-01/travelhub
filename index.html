@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0C1F3F">
 
   <!-- SEO -->
   <title>TravelHub - туры на запуск ракеты с Байконура | Туроператор Казахстана</title>
-  <meta name="description" content="Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения. Туры по всему Казахстану.">
+  <meta name="description" content="Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения. Туры по всему Казахстану: Мангистау, горы Алматы, Астана.">
   <link rel="canonical" href="https://ali-hub-01.github.io/travelhub/">
 
   <!-- Open Graph -->
@@ -32,32 +33,32 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
 
-  <!-- Шрифты: Unbounded (заголовки, кириллица+латиница) + Manrope (текст) -->
+  <!-- Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ======================= ШАПКА (светлая - логотип на белом) ======================= -->
+  <!-- ======================= ШАПКА ======================= -->
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="TravelHub">
-        <img src="assets/logo.png" alt="TravelHub" width="44" height="44" class="brand-logo">
+        <img src="assets/logo.png" alt="TravelHub" width="42" height="42" class="brand-logo">
         <span class="brand-word">Travel<b>Hub</b></span>
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Основная навигация" data-i18n-aria="nav.aria">
+        <a href="#regions"  data-i18n="nav.regions">Казахстан</a>
         <a href="#tours"    data-i18n="nav.tours">Туры</a>
         <a href="#route"    data-i18n="nav.route">Маршрут</a>
-        <a href="#included" data-i18n="nav.included">Что включено</a>
+        <a href="#video"    data-i18n="nav.video">Видео</a>
         <a href="#about"    data-i18n="nav.why">Почему мы</a>
         <a href="#schedule" data-i18n="nav.schedule">Пуски</a>
         <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
 
-        <!-- Переключатель языков (дублируется в мобильном меню автоматически) -->
         <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-aria="lang.aria">
           <button type="button" class="lang-btn" data-lang="ru">РУС</button>
           <button type="button" class="lang-btn" data-lang="en">ENG</button>
@@ -74,7 +75,7 @@
   </header>
 
   <main>
-    <!-- ======================= HERO: звёздное небо + стартовый комплекс ======================= -->
+    <!-- ======================= HERO: Байконур ======================= -->
     <section class="hero" id="hero">
       <canvas id="starfield" aria-hidden="true"></canvas>
       <div class="hero-photo" aria-hidden="true"></div>
@@ -122,8 +123,64 @@
       <div class="hero-bottom-fade" aria-hidden="true"></div>
     </section>
 
+    <!-- ======================= РЕГИОНЫ: ВЕСЬ КАЗАХСТАН ======================= -->
+    <section class="section section-light section-regions" id="regions">
+      <div class="container">
+        <p class="section-kicker reveal" data-i18n="reg.kicker">А ещё - весь Казахстан</p>
+        <h2 class="section-title reveal" data-i18n="reg.title">Возим по всей стране</h2>
+        <p class="section-sub reveal" data-i18n="reg.sub">Байконур - главное направление. Но Казахстан огромен: марсианские плато, снежные горы и футуристичные города.</p>
+
+        <div class="regions-mosaic reveal">
+          <figure class="region-card region-almaty">
+            <img src="assets/regions/almaty.jpg" alt="Горные вершины и озёра Алматы" data-i18n-alt="reg.altAlmaty" loading="lazy" width="1600" height="2842">
+            <figcaption>
+              <span class="region-name" data-i18n="reg.almaty">Алматы</span>
+              <span class="region-tag" data-i18n="reg.almatyX">Горы, озёра, каньоны</span>
+            </figcaption>
+          </figure>
+
+          <figure class="region-card region-bozzhyra">
+            <img src="assets/regions/mangystau-2.jpg" alt="Плато Бозжыра, скалы-клыки в степи Мангистау" data-i18n-alt="reg.altBozzhyra" loading="lazy" width="1600" height="2000">
+            <figcaption>
+              <span class="region-name" data-i18n="reg.bozzhyra">Мангистау · Бозжыра</span>
+              <span class="region-tag" data-i18n="reg.bozzhyraX">Марсианские плато</span>
+            </figcaption>
+          </figure>
+
+          <figure class="region-card region-astana">
+            <img src="assets/regions/astana.jpg" alt="Монумент Байтерек, ночная Астана" data-i18n-alt="reg.altAstana" loading="lazy" width="1600" height="1067">
+            <figcaption>
+              <span class="region-name" data-i18n="reg.astana">Астана</span>
+              <span class="region-tag" data-i18n="reg.astanaX">Байтерек ночью</span>
+            </figcaption>
+          </figure>
+
+          <figure class="region-card region-astana2">
+            <img src="assets/regions/astana-2.jpg" alt="Футуристичный скайлайн Астаны" data-i18n-alt="reg.altAstana2" loading="lazy" width="1600" height="1067">
+            <figcaption>
+              <span class="region-name" data-i18n="reg.astana2">Скайлайн столицы</span>
+              <span class="region-tag" data-i18n="reg.astana2X">Город будущего</span>
+            </figcaption>
+          </figure>
+
+          <figure class="region-card region-mangystau">
+            <img src="assets/regions/mangystau.jpg" alt="Меловые каньоны и степь Мангистау" data-i18n-alt="reg.altMangystau" loading="lazy" width="1600" height="1068">
+            <figcaption>
+              <span class="region-name" data-i18n="reg.mangystau">Мангистау</span>
+              <span class="region-tag" data-i18n="reg.mangystauX">Каньоны и Каспий</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="regions-cta reveal">
+          <p class="regions-cta-text" data-i18n="reg.ctaText">Разрабатываем индивидуальные программы по всему Казахстану по запросу.</p>
+          <a class="btn btn-primary btn-lg" data-wa="custom" href="https://wa.me/77760909818" target="_blank" rel="noopener" data-i18n="reg.cta">Обсудить маршрут</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ======================= ТУРЫ ======================= -->
-    <section class="section section-light" id="tours">
+    <section class="section section-dark section-tours" id="tours">
       <div class="container">
         <p class="section-kicker reveal" data-i18n="tours.kicker">Туры и цены</p>
         <h2 class="section-title reveal" data-i18n="tours.title">Выберите свою космическую программу</h2>
@@ -161,11 +218,11 @@
             </div>
           </article>
 
-          <!-- Тур 3: Буран -->
-          <article class="tour-card reveal" id="tour-buran">
-            <div class="tour-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M3 15.5 12 4l9 11.5H3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 15.5v3M16 15.5v3M12 15.5V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </div>
+          <!-- Тур 3: Буран (с реальным фото) -->
+          <article class="tour-card tour-card-media reveal" id="tour-buran">
+            <figure class="tour-media">
+              <img src="assets/buran.jpg" alt="Космический корабль «Буран» в монтажном корпусе Байконура" data-i18n-alt="gal.a3" loading="lazy" width="1600" height="1067" data-lightbox>
+            </figure>
             <h3 class="tour-name" data-i18n="t3.name">Байконур: тур «Буран», 1 день</h3>
             <p class="tour-desc" data-i18n="t3.desc">Легендарный корабль «Буран» и ракета «Энергия-М» в монтажно-испытательном корпусе. Плюс музей космонавтики.</p>
             <p class="tour-inc"><span data-i18n="t3.inc">Трансферы · гид · пропуска · музей</span></p>
@@ -206,7 +263,7 @@
       </div>
     </section>
 
-    <!-- ======================= CTA-ЛЕНТА: маршрут под запрос ======================= -->
+    <!-- ======================= CTA-ЛЕНТА ======================= -->
     <section class="custom-band" id="custom">
       <div class="container custom-inner reveal">
         <div>
@@ -218,14 +275,13 @@
     </section>
 
     <!-- ======================= МАРШРУТ ТУРА ======================= -->
-    <section class="section section-dark" id="route">
+    <section class="section section-light" id="route">
       <div class="container">
         <p class="section-kicker reveal" data-i18n="route.kicker">Маршрут тура на Байконур</p>
         <h2 class="section-title reveal" data-i18n="route.title">7 точек одного большого дня</h2>
         <p class="section-sub reveal" data-i18n="route.sub">От степного мемориала - до огня стартующей ракеты</p>
 
         <div class="route-layout">
-          <!-- Нативный таймлайн -->
           <ol class="route-timeline">
             <li class="route-step reveal"><span class="route-num">1</span><span class="route-label" data-i18n="route.p1">Мемориал Коркыт Ата</span></li>
             <li class="route-step reveal"><span class="route-num">2</span><span class="route-label" data-i18n="route.p2">Беседка Гагарина</span></li>
@@ -237,9 +293,35 @@
           </ol>
 
           <figure class="route-figure reveal">
-            <img src="assets/tour-route.jpg" alt="Карта маршрута тура на Байконур: 7 точек от мемориала Коркыт Ата до музея космонавтики" data-i18n-alt="route.imgalt" loading="lazy" width="1200" height="1200">
+            <img src="assets/tour-route.jpg" alt="Карта маршрута тура на Байконур: 7 точек от мемориала Коркыт Ата до музея космонавтики" data-i18n-alt="route.imgalt" loading="lazy" width="1200" height="1200" data-lightbox>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <!-- ======================= ВИДЕО С ТУРОВ ======================= -->
+    <section class="section section-dark section-video" id="video">
+      <canvas id="videoStars" aria-hidden="true"></canvas>
+      <div class="container video-inner">
+        <div class="video-copy">
+          <p class="section-kicker reveal" data-i18n="vid.kicker">Живое видео с наших туров</p>
+          <h2 class="section-title reveal" data-i18n="vid.title">Так это выглядит вживую</h2>
+          <p class="section-sub reveal" data-i18n="vid.sub">Наши туристы наблюдают пуск ракеты на закате - настоящее видео, снятое на туре TravelHub, без монтажа.</p>
+          <ul class="video-points reveal">
+            <li data-i18n="vid.p1">Реальные кадры с ближайшей безопасной точки</li>
+            <li data-i18n="vid.p2">Пламя, грохот и дрожь земли - без спецэффектов</li>
+            <li data-i18n="vid.p3">Именно это вы увидите на нашем туре</li>
+          </ul>
+        </div>
+
+        <figure class="phone-frame reveal">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <video class="phone-video" poster="assets/video-poster.jpg" controls playsinline preload="metadata"
+                 aria-label="Видео запуска ракеты на Байконуре с тура TravelHub" data-i18n-aria="vid.videoAria">
+            <source src="assets/baikonur-video.mp4" type="video/mp4">
+          </video>
+          <figcaption class="phone-caption" data-i18n="vid.caption">Пуск на закате · тур TravelHub, Байконур</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -261,7 +343,7 @@
       </div>
     </section>
 
-    <!-- ======================= ПОЧЕМУ МЫ ======================= -->
+    <!-- ======================= ПОЧЕМУ МЫ + ГАЛЕРЕЯ БАЙКОНУРА ======================= -->
     <section class="section section-dark" id="about">
       <div class="container">
         <p class="section-kicker reveal" data-i18n="why.kicker">Почему TravelHub</p>
@@ -300,41 +382,41 @@
           </div>
         </div>
 
-        <!-- Галерея: реальные фото -->
+        <!-- Галерея: реальные фото Байконура -->
         <div class="gallery" id="gallery">
           <figure class="gallery-item reveal">
-            <img src="assets/baikonur-pad.jpg" alt="Стартовый комплекс космодрома Байконур" data-i18n-alt="gal.a1" loading="lazy" width="1600" height="1200">
+            <img src="assets/baikonur-pad.jpg" alt="Стартовый комплекс космодрома Байконур" data-i18n-alt="gal.a1" loading="lazy" width="1600" height="1200" data-lightbox>
             <figcaption data-i18n="gal.c1">Стартовый комплекс, Байконур</figcaption>
           </figure>
           <figure class="gallery-item reveal">
-            <img src="assets/energia-m.jpg" alt="Ракета «Энергия-М» в монтажно-испытательном корпусе Байконура" data-i18n-alt="gal.a2" loading="lazy" width="1100" height="1649">
+            <img src="assets/buran.jpg" alt="Космический корабль «Буран» в монтажном корпусе Байконура" data-i18n-alt="gal.a3" loading="lazy" width="1600" height="1067" data-lightbox>
+            <figcaption data-i18n="gal.c3">Корабль «Буран», монтажный корпус</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/energia-m.jpg" alt="Ракета «Энергия-М» в монтажно-испытательном корпусе Байконура" data-i18n-alt="gal.a2" loading="lazy" width="1100" height="1649" data-lightbox>
             <figcaption data-i18n="gal.c2">Ракета «Энергия-М», МИК</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- ======================= ЛИЦЕНЗИЯ ======================= -->
+    <!-- ======================= ЛИЦЕНЗИЯ (реальный документ) ======================= -->
     <section class="section section-light" id="license">
       <div class="container license-layout">
-        <!-- «Печать» SVG -->
-        <div class="license-seal reveal" aria-hidden="true">
-          <svg viewBox="0 0 120 120">
-            <defs>
-              <path id="sealCircle" d="M60 14a46 46 0 1 1 0 92 46 46 0 0 1 0-92Z"></path>
-            </defs>
-            <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="1.2"/>
-            <text font-size="9.5" letter-spacing="2.6" fill="currentColor">
-              <textPath href="#sealCircle">TRAVELHUB · LICENSED TOUR OPERATOR · KAZAKHSTAN ·</textPath>
-            </text>
-            <path d="M60 44l4.7 9.5 10.5 1.5-7.6 7.4 1.8 10.4L60 67.9l-9.4 4.9 1.8-10.4-7.6-7.4 10.5-1.5L60 44Z" fill="currentColor"/>
-          </svg>
-        </div>
+        <figure class="license-doc reveal">
+          <button type="button" class="license-zoom" data-lightbox-btn aria-label="Открыть лицензию крупно" data-i18n-aria="lic.zoomAria">
+            <img src="assets/license-page.jpg" alt="Первая страница государственной лицензии туроператора TravelHub" data-i18n-alt="lic.alt" loading="lazy" width="1100" height="1555" data-lightbox>
+            <span class="license-zoom-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M20 20l-3.2-3.2M11 8.2v5.6M8.2 11h5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span data-i18n="lic.zoom">Нажмите, чтобы увеличить</span>
+            </span>
+          </button>
+        </figure>
 
         <div class="license-body">
           <p class="section-kicker reveal" data-i18n="lic.kicker">Работаем официально</p>
-          <h2 class="section-title reveal" data-i18n="lic.title">Лицензированный туроператор Республики Казахстан</h2>
+          <h2 class="section-title reveal" data-i18n="lic.title">Настоящая лицензия туроператора РК</h2>
+          <p class="section-sub reveal" data-i18n="lic.short">Лицензия туроператора № 26004458 от 13.02.2026, ТОО «TravelHub», въездной и внутренний туризм.</p>
           <dl class="license-facts reveal">
             <div><dt data-i18n="lic.numL">Лицензия туроператора</dt><dd>№ 26004458 · 13.02.2026</dd></div>
             <div><dt data-i18n="lic.typeL">Вид деятельности</dt><dd data-i18n="lic.typeV">Въездной и внутренний туризм</dd></div>
@@ -474,6 +556,16 @@
   <a class="wa-fab" data-wa="fab" href="https://wa.me/77760909818" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-i18n-aria="wa.fab">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.6 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.8Z"/></svg>
   </a>
+
+  <!-- Лайтбокс (лицензия + галерея) -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Закрыть" data-i18n-aria="lb.close">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </figure>
+  </div>
 
   <script src="script.js"></script>
 </body>
