@@ -296,7 +296,10 @@ section, article[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 .price-num { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: #fff; }
 .price-num small { font-size: 13px; font-weight: 500; }
 .price-req { font-size: 15px; font-weight: 700; color: var(--orange-bright); }
+.price-unit { font-size: .72em; font-weight: 600; color: #8ea1c4; margin-left: 2px; white-space: nowrap; }
+.price-detail { margin-top: 10px; font-size: 12px; line-height: 1.45; color: #9fb0d0; max-width: 34ch; }
 .tour-card-wide .tour-foot { margin-top: 0; margin-left: auto; }
+.tour-card-wide .price-detail { flex-basis: 100%; margin-top: 14px; }
 .btn-book { padding: 11px 22px; font-size: 14px; }
 
 /* ============================================================
