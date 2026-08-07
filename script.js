@@ -18,7 +18,7 @@ var I18N = {
   /* ---------------- РУССКИЙ ---------------- */
   ru: {
     'meta.title': 'TravelHub - туры на запуск ракеты с Байконура | Туроператор Казахстана',
-    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, ближайшие безопасные точки наблюдения. Туры по всему Казахстану: Мангистау, горы Алматы, Астана.',
+    'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 100 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, наблюдение с официально определённой смотровой площадки. Туры по всему Казахстану: Мангистау, горы Алматы, Астана.',
 
     'nav.aria': 'Основная навигация',
     'nav.burger': 'Открыть меню',
@@ -31,14 +31,14 @@ var I18N = {
     'nav.why': 'Почему мы',
     'nav.schedule': 'Пуски',
     'nav.contacts': 'Контакты',
-    'nav.cta': 'Забронировать',
+    'nav.cta': 'Узнать стоимость',
 
     'hero.kicker': 'Лицензированный туроператор Казахстана',
     'hero.title1': 'Старт ракеты.',
     'hero.title2': 'Вживую.',
     'hero.title3': 'С Байконура.',
     'hero.sub': 'Байконур - наша специализация. Весь Казахстан - наша территория.',
-    'hero.cta1': 'Забронировать тур',
+    'hero.cta1': 'Узнать стоимость',
     'hero.cta2': 'Смотреть туры',
     'hero.next': 'До ближайшего пуска - Союз / Прогресс МС-35',
     'hero.datenote': 'Дата уточняется по графику Роскосмоса',
@@ -74,11 +74,12 @@ var I18N = {
     'tours.bestseller': 'Бестселлер',
     'price.from': 'от',
     'price.request': 'цена по запросу',
-    'btn.book': 'Забронировать',
+    'price.note': 'Цена от 150 000 ₸ на человека. Итоговая стоимость зависит от программы тура, даты запуска и количества участников.',
+    'btn.book': 'Узнать стоимость',
 
     't1.name': 'Байконур: наблюдение запуска, 1 день',
-    't1.desc': 'Экспедиция к легендарному космодрому в день пуска. Грохот двигателей, пламя и дрожь земли - с ближайшей безопасной точки.',
-    't1.inc': 'Трансферы · гид · пропуска · точка наблюдения',
+    't1.desc': 'Экспедиция к легендарному космодрому в день пуска. Грохот двигателей, пламя и дрожь земли - с официально определённой смотровой площадки.',
+    't1.inc': 'Трансферы · гид · пропуска · смотровая площадка',
     't2.name': 'Байконур: расширенная программа, 3 дня',
     't2.desc': 'Полное погружение: вывоз ракеты, Гагаринский старт, музеи и сам запуск. Три дня внутри живой космической истории.',
     't2.inc': 'Отель · завтраки · трансферы · гид · пропуска',
@@ -112,7 +113,7 @@ var I18N = {
     'vid.kicker': 'Живое видео с наших туров',
     'vid.title': 'Так это выглядит вживую',
     'vid.sub': 'Наши туристы наблюдают пуск ракеты на закате - настоящее видео, снятое на туре TravelHub, без монтажа.',
-    'vid.p1': 'Реальные кадры с ближайшей безопасной точки',
+    'vid.p1': 'Реальные кадры с официально определённой смотровой площадки',
     'vid.p2': 'Пламя, грохот и дрожь земли - без спецэффектов',
     'vid.p3': 'Именно это вы увидите на нашем туре',
     'vid.caption': 'Пуск на закате · тур TravelHub, Байконур',
@@ -124,14 +125,14 @@ var I18N = {
     'inc.i2': 'Проживание в отелях',
     'inc.i3': 'Завтраки',
     'inc.i4': 'Все трансферы по программе',
-    'inc.i5': 'Доступ на космодром и наблюдение с ближайших безопасных точек',
-    'inc.i6': 'Встречи с космонавтами',
+    'inc.i5': 'Наблюдение запуска с официально определённой смотровой площадки',
+    'inc.i6': 'Встреча с космонавтами - по предварительному согласованию',
     'inc.i7': 'Оформление пропусков и вся логистика',
 
     'why.kicker': 'Почему TravelHub',
     'why.title': 'Космос - это серьёзно. Мы тоже.',
-    'why.w1t': 'Ближайшие точки наблюдения',
-    'why.w1x': 'Смотрите старт с ближайших безопасных площадок - максимум эмоций без компромиссов.',
+    'why.w1t': 'Официальная смотровая площадка',
+    'why.w1x': 'Наблюдение с официально определённой смотровой площадки - безопасно и по правилам космодрома.',
     'why.w2t': 'Лицензированный туроператор РК',
     'why.w2x': 'Официальная лицензия на въездной и внутренний туризм. Работаем прозрачно и по договору.',
     'why.w3t': 'Пропуска и логистика - на нас',
@@ -139,7 +140,7 @@ var I18N = {
     'why.w4t': 'Профессиональные гиды',
     'why.w4x': 'Знают Байконур изнутри и рассказывают о космосе так, что мурашки - до старта.',
     'why.w5t': '100% возврат',
-    'why.w5x': 'Пуск отменён или перенесён - вернём деньги полностью либо перенесём вашу поездку.',
+    'why.w5x': 'При переносе или отмене запуска гарантируется 100% возврат. В случае изменения, переноса или отмены запуска мы предложим альтернативную дату, изменение программы или возврат средств в соответствии с условиями договора.',
     'why.w6t': 'Специализация + территория',
     'why.w6x': 'Байконур - наша специализация. Весь Казахстан - наша территория.',
 
@@ -176,29 +177,55 @@ var I18N = {
     'sch.l2x': 'Грузовой корабль к МКС · открыто бронирование',
     'sch.open': 'бронирование открыто',
     'sch.note': 'Даты пусков уточняются по графику Роскосмоса - подтвердим при бронировании.',
+    'sched.warn': 'Даты запусков могут изменяться по решению соответствующих организаций. TravelHub не является организатором космических запусков и не может гарантировать неизменность даты и времени запуска.',
+
+    'how.kicker': 'Просто и понятно',
+    'how.title': 'Как забронировать',
+    'how.s1t': 'Оставьте заявку',
+    'how.s1x': 'Выберите программу и укажите количество участников.',
+    'how.s2t': 'Получите предложение',
+    'how.s2x': 'Мы подтвердим программу, стоимость и необходимые документы.',
+    'how.s3t': 'Оформление разрешений',
+    'how.s3x': 'После получения документов начинается процедура согласования посещения.',
+    'how.s4t': 'Приезжайте на Байконур',
+    'how.s4x': 'TravelHub организует согласованные услуги по программе.',
 
     'bk.kicker': 'Заявка за 30 секунд',
-    'bk.title': 'Забронируйте место у стартового стола',
+    'bk.title': 'Оставьте заявку - рассчитаем стоимость тура',
     'bk.sub': 'Заполните форму - заявка откроется в WhatsApp, мы ответим быстро. Никаких данных на сервер не отправляем.',
     'bk.p1': 'Ответ в WhatsApp в течение рабочего дня',
     'bk.p2': 'Поможем выбрать дату под ближайший пуск',
-    'bk.p3': '100% возврат при отмене или переносе пуска',
+    'bk.p3': 'При отмене или переносе пуска - 100% возврат или альтернативная дата по договору.',
+    'refund.full': 'При переносе или отмене запуска гарантируется 100% возврат. В случае изменения, переноса или отмены запуска мы предложим альтернативную дату, изменение программы или возврат средств в соответствии с условиями договора.',
 
-    'form.name': 'Ваше имя',
+    'form.name': 'Имя и фамилия',
     'form.namePh': 'Как к вам обращаться',
-    'form.tour': 'Тур',
+    'form.country': 'Страна / гражданство',
+    'form.countryPh': 'Например, Китай',
+    'form.wa': 'WhatsApp',
+    'form.waPh': '+7 700 000 0000',
+    'form.email': 'E-mail',
+    'form.emailPh': 'you@example.com',
+    'form.count': 'Количество туристов',
+    'form.countPh': '2',
+    'form.tour': 'Выбранный тур',
     'form.tourPh': '- выберите тур -',
     'form.o1': 'Байконур: запуск, 1 день - от 150 000 ₸',
     'form.o2': 'Байконур: 3 дня - 300 000-450 000 ₸',
     'form.o3': 'Байконур: «Буран», 1 день - 100 000 ₸',
     'form.o4': 'Корпоратив / группы / MICE',
     'form.o5': 'Весь Казахстан под запрос',
-    'form.date': 'Дата (необязательно)',
+    'form.date': 'Желаемая дата',
     'form.datePh': 'например, 09.09.2026',
-    'form.pax': 'Человек (необязательно)',
-    'form.paxPh': '2',
-    'form.err': 'Пожалуйста, укажите имя и выберите тур',
-    'form.btn': 'Отправить в WhatsApp',
+    'form.comment': 'Комментарий',
+    'form.commentPh': 'Пожелания к программе, вопросы',
+    'form.err': 'Пожалуйста, укажите имя, тур и WhatsApp или e-mail',
+    'form.submit': 'Получить предложение',
+    'form.success': 'Спасибо! Мы получили вашу заявку. Менеджер TravelHub свяжется с вами для уточнения программы, стоимости и необходимых документов.',
+
+    'b2b.title': 'Для туроператоров и турагентств',
+    'b2b.text': 'TravelHub сотрудничает с зарубежными туристическими компаниями и формирует программы по Байконуру и Казахстану для индивидуальных туристов и групп. Для получения B2B-предложения свяжитесь с нами.',
+    'b2b.cta': 'Запросить B2B-предложение',
 
     'ct.kicker': 'Контакты',
     'ct.title': 'Связь с Землёй - на связи 7 дней в неделю',
@@ -221,17 +248,22 @@ var I18N = {
     'wa.t4': 'Здравствуйте! Интересует корпоративный тур / приём группы (MICE)',
     'wa.t5': 'Здравствуйте! Интересует индивидуальный тур по Казахстану',
     'wa.custom': 'Здравствуйте! Хотим обсудить индивидуальную программу по Казахстану',
+    'wa.b2b': 'Здравствуйте! Мы турагентство / туроператор и хотим обсудить B2B-сотрудничество с TravelHub.',
     'wa.hello': 'Здравствуйте! Заявка с сайта TravelHub',
-    'wa.fName': 'Имя',
+    'wa.fName': 'Имя и фамилия',
+    'wa.fCountry': 'Страна',
+    'wa.fWa': 'WhatsApp',
+    'wa.fEmail': 'E-mail',
+    'wa.fCount': 'Туристов',
     'wa.fTour': 'Тур',
     'wa.fDate': 'Дата',
-    'wa.fPax': 'Человек'
+    'wa.fComment': 'Комментарий'
   },
 
   /* ---------------- ENGLISH ---------------- */
   en: {
     'meta.title': 'TravelHub - Baikonur Rocket Launch Tours | Kazakhstan Tour Operator',
-    'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, closest safe viewing points. Tours across Kazakhstan: Mangystau, Almaty mountains, Astana.',
+    'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from 100,000 ₸. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, viewing from the officially designated observation platform. Tours across Kazakhstan: Mangystau, Almaty mountains, Astana.',
 
     'nav.aria': 'Main navigation',
     'nav.burger': 'Open menu',
@@ -244,14 +276,14 @@ var I18N = {
     'nav.why': 'Why us',
     'nav.schedule': 'Launches',
     'nav.contacts': 'Contacts',
-    'nav.cta': 'Book now',
+    'nav.cta': 'Get a quote',
 
     'hero.kicker': 'Licensed tour operator in Kazakhstan',
     'hero.title1': 'A rocket launch.',
     'hero.title2': 'For real.',
     'hero.title3': 'From Baikonur.',
     'hero.sub': 'Baikonur is our specialty. All of Kazakhstan is our territory.',
-    'hero.cta1': 'Book a tour',
+    'hero.cta1': 'Get a quote',
     'hero.cta2': 'See the tours',
     'hero.next': 'Next launch - Soyuz / Progress MS-35',
     'hero.datenote': 'Date subject to Roscosmos schedule updates',
@@ -287,11 +319,12 @@ var I18N = {
     'tours.bestseller': 'Bestseller',
     'price.from': 'from',
     'price.request': 'price on request',
-    'btn.book': 'Book now',
+    'price.note': 'Price from 150,000 ₸ per person. The final cost depends on the tour program, the launch date and the number of participants.',
+    'btn.book': 'Get a quote',
 
     't1.name': 'Baikonur: launch viewing, 1 day',
-    't1.desc': 'An expedition to the legendary cosmodrome on launch day. The roar of engines, the flame and the trembling ground - from the closest safe viewpoint.',
-    't1.inc': 'Transfers · guide · permits · viewing point',
+    't1.desc': 'An expedition to the legendary cosmodrome on launch day. The roar of engines, the flame and the trembling ground - from the officially designated observation platform.',
+    't1.inc': 'Transfers · guide · permits · observation platform',
     't2.name': 'Baikonur: extended program, 3 days',
     't2.desc': 'Full immersion: rocket rollout, Gagarin’s Start, museums and the launch itself. Three days inside living space history.',
     't2.inc': 'Hotel · breakfasts · transfers · guide · permits',
@@ -325,7 +358,7 @@ var I18N = {
     'vid.kicker': 'Live footage from our tours',
     'vid.title': 'This is what it looks like for real',
     'vid.sub': 'Our travelers watch a rocket launch at sunset - real footage filmed on a TravelHub tour, unedited.',
-    'vid.p1': 'Real footage from the closest safe point',
+    'vid.p1': 'Real footage from the officially designated observation platform',
     'vid.p2': 'Flame, roar and trembling ground - no special effects',
     'vid.p3': 'This is exactly what you will see on our tour',
     'vid.caption': 'Launch at sunset · TravelHub tour, Baikonur',
@@ -337,14 +370,14 @@ var I18N = {
     'inc.i2': 'Hotel accommodation',
     'inc.i3': 'Breakfasts',
     'inc.i4': 'All transfers on the program',
-    'inc.i5': 'Cosmodrome access and viewing from the closest safe points',
-    'inc.i6': 'Meetings with cosmonauts',
+    'inc.i5': 'Launch viewing from the officially designated observation platform',
+    'inc.i6': 'Meeting with cosmonauts - subject to prior arrangement',
     'inc.i7': 'Permits handled and full logistics',
 
     'why.kicker': 'Why TravelHub',
     'why.title': 'Space is serious business. So are we.',
-    'why.w1t': 'Closest viewing points',
-    'why.w1x': 'Watch the launch from the closest safe areas - maximum emotion, no compromises.',
+    'why.w1t': 'Official observation platform',
+    'why.w1x': 'Viewing from the officially designated observation platform - safe and in line with cosmodrome rules.',
     'why.w2t': 'Licensed tour operator of Kazakhstan',
     'why.w2x': 'Official license for inbound and domestic tourism. Transparent work under contract.',
     'why.w3t': 'Permits & logistics on us',
@@ -352,7 +385,7 @@ var I18N = {
     'why.w4t': 'Professional guides',
     'why.w4x': 'They know Baikonur from the inside and tell space stories that give you goosebumps before liftoff.',
     'why.w5t': '100% refund',
-    'why.w5x': 'If the launch is canceled or postponed, we refund you in full or reschedule your trip.',
+    'why.w5x': 'If the launch is postponed or canceled, a 100% refund is guaranteed. In case of any change, postponement or cancellation of the launch, we will offer an alternative date, a program change or a refund in accordance with the terms of the contract.',
     'why.w6t': 'Specialty + territory',
     'why.w6x': 'Baikonur is our specialty. All of Kazakhstan is our territory.',
 
@@ -389,29 +422,55 @@ var I18N = {
     'sch.l2x': 'Cargo ship to the ISS · booking open',
     'sch.open': 'booking open',
     'sch.note': 'Launch dates follow the Roscosmos schedule and may change - we confirm them at booking.',
+    'sched.warn': 'Launch dates may change by decision of the relevant organizations. TravelHub is not the organizer of space launches and cannot guarantee that the launch date and time will remain unchanged.',
+
+    'how.kicker': 'Simple and clear',
+    'how.title': 'How to book',
+    'how.s1t': 'Leave a request',
+    'how.s1x': 'Choose a program and tell us the number of participants.',
+    'how.s2t': 'Get an offer',
+    'how.s2x': 'We confirm the program, cost and required documents.',
+    'how.s3t': 'Permit processing',
+    'how.s3x': 'Once the documents are received, the visit approval procedure begins.',
+    'how.s4t': 'Come to Baikonur',
+    'how.s4x': 'TravelHub arranges the agreed services according to the program.',
 
     'bk.kicker': 'A 30-second request',
-    'bk.title': 'Book your place by the launch pad',
+    'bk.title': 'Leave a request - we will calculate your tour cost',
     'bk.sub': 'Fill in the form - your request opens in WhatsApp and we reply fast. No data is sent to any server.',
     'bk.p1': 'WhatsApp reply within one business day',
     'bk.p2': 'We will help you pick a date for the next launch',
-    'bk.p3': '100% refund if the launch is canceled or postponed',
+    'bk.p3': 'If the launch is canceled or postponed - a 100% refund or an alternative date under the contract.',
+    'refund.full': 'If the launch is postponed or canceled, a 100% refund is guaranteed. In case of any change, postponement or cancellation of the launch, we will offer an alternative date, a program change or a refund in accordance with the terms of the contract.',
 
-    'form.name': 'Your name',
+    'form.name': 'Full name',
     'form.namePh': 'How should we address you',
-    'form.tour': 'Tour',
+    'form.country': 'Country / citizenship',
+    'form.countryPh': 'e.g. China',
+    'form.wa': 'WhatsApp',
+    'form.waPh': '+7 700 000 0000',
+    'form.email': 'E-mail',
+    'form.emailPh': 'you@example.com',
+    'form.count': 'Number of travelers',
+    'form.countPh': '2',
+    'form.tour': 'Selected tour',
     'form.tourPh': '- choose a tour -',
     'form.o1': 'Baikonur: launch, 1 day - from 150,000 ₸',
     'form.o2': 'Baikonur: 3 days - 300,000-450,000 ₸',
     'form.o3': 'Baikonur: Buran, 1 day - 100,000 ₸',
     'form.o4': 'Corporate / groups / MICE',
     'form.o5': 'All of Kazakhstan, tailor-made',
-    'form.date': 'Date (optional)',
+    'form.date': 'Preferred date',
     'form.datePh': 'e.g. 09.09.2026',
-    'form.pax': 'People (optional)',
-    'form.paxPh': '2',
-    'form.err': 'Please enter your name and choose a tour',
-    'form.btn': 'Send via WhatsApp',
+    'form.comment': 'Comment',
+    'form.commentPh': 'Program preferences, questions',
+    'form.err': 'Please enter your name, a tour and WhatsApp or e-mail',
+    'form.submit': 'Get an offer',
+    'form.success': 'Thank you! We have received your request. A TravelHub manager will contact you to confirm the program, cost and required documents.',
+
+    'b2b.title': 'For tour operators and travel agencies',
+    'b2b.text': 'TravelHub works with international travel companies and builds programs around Baikonur and Kazakhstan for individual travelers and groups. To receive a B2B offer, get in touch with us.',
+    'b2b.cta': 'Request a B2B offer',
 
     'ct.kicker': 'Contacts',
     'ct.title': 'Ground control - online 7 days a week',
@@ -434,17 +493,22 @@ var I18N = {
     'wa.t4': 'Hello! I’m interested in a corporate / group tour (MICE)',
     'wa.t5': 'Hello! I’m interested in a tailor-made tour around Kazakhstan',
     'wa.custom': 'Hello! We’d like to discuss a custom program in Kazakhstan',
+    'wa.b2b': 'Hello! We are a travel agency / tour operator and would like to discuss B2B cooperation with TravelHub.',
     'wa.hello': 'Hello! Booking request from the TravelHub website',
-    'wa.fName': 'Name',
+    'wa.fName': 'Full name',
+    'wa.fCountry': 'Country',
+    'wa.fWa': 'WhatsApp',
+    'wa.fEmail': 'E-mail',
+    'wa.fCount': 'Travelers',
     'wa.fTour': 'Tour',
     'wa.fDate': 'Date',
-    'wa.fPax': 'People'
+    'wa.fComment': 'Comment'
   },
 
   /* ---------------- 中文（简体） ---------------- */
   zh: {
     'meta.title': 'TravelHub - 拜科努尔火箭发射观摩之旅 | 哈萨克斯坦旅游运营商',
-    'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，100 000 ₸ 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，最近的安全观测点。畅游哈萨克斯坦全境：曼格斯套、阿拉木图雪山、阿斯塔纳。',
+    'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，100 000 ₸ 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，在官方指定的观景平台观看发射。畅游哈萨克斯坦全境：曼格斯套、阿拉木图雪山、阿斯塔纳。',
 
     'nav.aria': '主导航',
     'nav.burger': '打开菜单',
@@ -457,14 +521,14 @@ var I18N = {
     'nav.why': '选择我们',
     'nav.schedule': '发射日程',
     'nav.contacts': '联系方式',
-    'nav.cta': '立即预订',
+    'nav.cta': '获取报价',
 
     'hero.kicker': '哈萨克斯坦持牌旅游运营商',
     'hero.title1': '火箭发射。',
     'hero.title2': '亲眼见证。',
     'hero.title3': '就在拜科努尔。',
     'hero.sub': '拜科努尔是我们的专长，整个哈萨克斯坦是我们的天地。',
-    'hero.cta1': '预订行程',
+    'hero.cta1': '获取报价',
     'hero.cta2': '浏览线路',
     'hero.next': '距最近一次发射 - 联盟号 / 进步MS-35',
     'hero.datenote': '具体日期以俄罗斯航天集团发射计划为准',
@@ -500,11 +564,12 @@ var I18N = {
     'tours.bestseller': '热销',
     'price.from': '起价',
     'price.request': '价格面议',
-    'btn.book': '立即预订',
+    'price.note': '价格每人 150 000 ₸ 起。最终费用取决于行程方案、发射日期及参与人数。',
+    'btn.book': '获取报价',
 
     't1.name': '拜科努尔：观看火箭发射一日游',
-    't1.desc': '发射当天前往传奇航天发射场。在最近的安全观测点，亲身感受引擎的轰鸣、烈焰与大地的震颤。',
-    't1.inc': '全程接送 · 导游 · 通行证 · 观测点',
+    't1.desc': '发射当天前往传奇航天发射场。在官方指定的观景平台，亲身感受引擎的轰鸣、烈焰与大地的震颤。',
+    't1.inc': '全程接送 · 导游 · 通行证 · 观景平台',
     't2.name': '拜科努尔：深度三日游',
     't2.desc': '全方位沉浸体验：火箭转运、加加林发射台、博物馆以及发射本身。三天置身鲜活的航天历史之中。',
     't2.inc': '酒店 · 早餐 · 接送 · 导游 · 通行证',
@@ -538,7 +603,7 @@ var I18N = {
     'vid.kicker': '来自我们旅程的实拍视频',
     'vid.title': '这就是现场的真实景象',
     'vid.sub': '我们的游客在日落时分观看火箭发射--由 TravelHub 旅程实地拍摄，未经剪辑。',
-    'vid.p1': '在最近的安全观测点实地拍摄',
+    'vid.p1': '在官方指定的观景平台实地拍摄',
     'vid.p2': '烈焰、轰鸣与大地震颤--绝无特效',
     'vid.p3': '这正是您在我们旅程中将看到的景象',
     'vid.caption': '日落发射 · TravelHub 旅程，拜科努尔',
@@ -550,14 +615,14 @@ var I18N = {
     'inc.i2': '酒店住宿',
     'inc.i3': '早餐',
     'inc.i4': '行程内全部接送',
-    'inc.i5': '进入发射场，在最近的安全观测点观看发射',
-    'inc.i6': '与宇航员见面',
+    'inc.i5': '在官方指定的观景平台观看发射',
+    'inc.i6': '与宇航员会面 - 需提前协调安排',
     'inc.i7': '通行证办理及全程后勤保障',
 
     'why.kicker': '为什么选择 TravelHub',
     'why.title': '太空容不得马虎，我们也一样。',
-    'why.w1t': '最近的观测点',
-    'why.w1x': '在距离最近的安全观测点观看发射--震撼体验，绝不妥协。',
+    'why.w1t': '官方观景平台',
+    'why.w1x': '在官方指定的观景平台观看发射 - 安全且符合航天发射场规定。',
     'why.w2t': '哈萨克斯坦持牌旅游运营商',
     'why.w2x': '持有入境游与国内游官方牌照，签订合同，透明经营。',
     'why.w3t': '通行证与后勤全包',
@@ -565,7 +630,7 @@ var I18N = {
     'why.w4t': '专业导游',
     'why.w4x': '他们深谙拜科努尔的一切，航天故事讲得扣人心弦。',
     'why.w5t': '100% 退款保障',
-    'why.w5x': '若发射取消或推迟，我们将全额退款或为您改期。',
+    'why.w5x': '若发射推迟或取消，保证 100% 退款。如遇发射变更、推迟或取消，我们将根据合同条款为您提供替代日期、调整行程或退还款项。',
     'why.w6t': '专长 + 天地',
     'why.w6x': '拜科努尔是我们的专长，整个哈萨克斯坦是我们的天地。',
 
@@ -602,29 +667,55 @@ var I18N = {
     'sch.l2x': '国际空间站货运飞船 · 已开放预订',
     'sch.open': '开放预订',
     'sch.note': '发射日期以俄罗斯航天集团计划为准，可能调整--预订时我们会与您确认。',
+    'sched.warn': '发射日期可能因相关机构的决定而变动。TravelHub 并非航天发射的组织方，无法保证发射日期与时间保持不变。',
+
+    'how.kicker': '简单清晰',
+    'how.title': '如何预订',
+    'how.s1t': '提交申请',
+    'how.s1x': '选择行程方案并告知参加人数。',
+    'how.s2t': '获取方案',
+    'how.s2x': '我们将确认行程、费用及所需材料。',
+    'how.s3t': '办理许可',
+    'how.s3x': '收到材料后，即开始办理参观审批手续。',
+    'how.s4t': '抵达拜科努尔',
+    'how.s4x': 'TravelHub 按方案安排已确认的各项服务。',
 
     'bk.kicker': '30 秒提交申请',
-    'bk.title': '预订您在发射台旁的位置',
+    'bk.title': '提交申请 - 我们为您核算行程费用',
     'bk.sub': '填写表单后申请将在 WhatsApp 中打开，我们会尽快回复。您的数据不会上传至任何服务器。',
     'bk.p1': '工作日内通过 WhatsApp 回复',
     'bk.p2': '帮您选择最近发射窗口的日期',
-    'bk.p3': '发射取消或推迟可获 100% 退款',
+    'bk.p3': '发射取消或推迟 - 可获 100% 退款或按合同改期。',
+    'refund.full': '若发射推迟或取消，保证 100% 退款。如遇发射变更、推迟或取消，我们将根据合同条款为您提供替代日期、调整行程或退还款项。',
 
-    'form.name': '您的姓名',
+    'form.name': '姓名',
     'form.namePh': '请问如何称呼您',
-    'form.tour': '线路',
+    'form.country': '国家 / 国籍',
+    'form.countryPh': '例如：中国',
+    'form.wa': 'WhatsApp',
+    'form.waPh': '+7 700 000 0000',
+    'form.email': '电子邮箱',
+    'form.emailPh': 'you@example.com',
+    'form.count': '参加人数',
+    'form.countPh': '2',
+    'form.tour': '所选线路',
     'form.tourPh': '- 请选择线路 -',
     'form.o1': '拜科努尔：发射一日游 - 150 000 ₸ 起',
     'form.o2': '拜科努尔：三日游 - 300 000-450 000 ₸',
     'form.o3': '拜科努尔：“暴风雪号”一日游 - 100 000 ₸',
     'form.o4': '企业团建 / 团队 / MICE',
     'form.o5': '哈萨克斯坦全境定制游',
-    'form.date': '日期（选填）',
+    'form.date': '期望日期',
     'form.datePh': '例如 09.09.2026',
-    'form.pax': '人数（选填）',
-    'form.paxPh': '2',
-    'form.err': '请填写姓名并选择线路',
-    'form.btn': '通过 WhatsApp 发送',
+    'form.comment': '备注',
+    'form.commentPh': '行程需求、疑问',
+    'form.err': '请填写姓名、选择线路并填写 WhatsApp 或电子邮箱',
+    'form.submit': '获取方案',
+    'form.success': '感谢您！我们已收到您的申请。TravelHub 的顾问将与您联系，确认行程、费用及所需材料。',
+
+    'b2b.title': '致旅游运营商与旅行社',
+    'b2b.text': 'TravelHub 与海外旅游公司合作，为个人游客及团队打造拜科努尔与哈萨克斯坦的行程方案。如需 B2B 合作方案，请与我们联系。',
+    'b2b.cta': '索取 B2B 合作方案',
 
     'ct.kicker': '联系我们',
     'ct.title': '“地面控制中心”--每周 7 天在线',
@@ -647,11 +738,16 @@ var I18N = {
     'wa.t4': '您好！我想咨询企业团建 / 团队接待（MICE）行程',
     'wa.t5': '您好！我想咨询哈萨克斯坦定制行程',
     'wa.custom': '您好！我们想咨询哈萨克斯坦定制行程方案',
+    'wa.b2b': '您好！我们是旅行社 / 旅游运营商，希望与 TravelHub 洽谈 B2B 合作。',
     'wa.hello': '您好！来自 TravelHub 网站的预订申请',
     'wa.fName': '姓名',
+    'wa.fCountry': '国家',
+    'wa.fWa': 'WhatsApp',
+    'wa.fEmail': '电子邮箱',
+    'wa.fCount': '人数',
     'wa.fTour': '线路',
     'wa.fDate': '日期',
-    'wa.fPax': '人数'
+    'wa.fComment': '备注'
   }
 };
 
@@ -856,7 +952,7 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
   var items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
-  ['.tours-grid', '.why-grid', '.included-grid', '.contacts-grid'].forEach(function (sel) {
+  ['.tours-grid', '.why-grid', '.included-grid', '.contacts-grid', '.how-steps'].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (grid) {
       Array.prototype.forEach.call(grid.children, function (child, i) {
         if (child.classList.contains('reveal')) child.style.setProperty('--d', (i % 6) * 0.07 + 's');
@@ -950,21 +1046,34 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
   var form = document.getElementById('bookingForm');
   if (!form) return;
   var nameEl = document.getElementById('fName');
-  var tourEl = document.getElementById('fTour');
+  var countryEl = document.getElementById('fCountry');
+  var countEl = document.getElementById('fCount');
+  var waEl = document.getElementById('fWa');
+  var emailEl = document.getElementById('fEmail');
   var dateEl = document.getElementById('fDate');
-  var paxEl = document.getElementById('fPax');
+  var tourEl = document.getElementById('fTour');
+  var commentEl = document.getElementById('fComment');
   var errEl = document.getElementById('formError');
+  var successEl = document.getElementById('bookingSuccess');
+
+  function val(el) { return el && el.value ? el.value.trim() : ''; }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var name = nameEl.value.trim();
+    var name = val(nameEl);
     var tour = tourEl.value;
+    var wa = val(waEl);
+    var email = val(emailEl);
+    var hasContact = !!wa || !!email;
 
     nameEl.classList.toggle('invalid', !name);
     tourEl.classList.toggle('invalid', !tour);
-    if (!name || !tour) {
+    waEl.classList.toggle('invalid', !hasContact);
+    emailEl.classList.toggle('invalid', !hasContact);
+
+    if (!name || !tour || !hasContact) {
       errEl.hidden = false;
-      (!name ? nameEl : tourEl).focus();
+      (!name ? nameEl : (!tour ? tourEl : waEl)).focus();
       return;
     }
     errEl.hidden = true;
@@ -972,19 +1081,30 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
     var tourLabel = t('form.o' + tour.slice(1));
     var lines = [
       t('wa.hello'),
-      t('wa.fName') + ': ' + name,
-      t('wa.fTour') + ': ' + tourLabel
+      t('wa.fName') + ': ' + name
     ];
-    if (dateEl.value.trim()) lines.push(t('wa.fDate') + ': ' + dateEl.value.trim());
-    if (paxEl.value.trim()) lines.push(t('wa.fPax') + ': ' + paxEl.value.trim());
+    if (val(countryEl)) lines.push(t('wa.fCountry') + ': ' + val(countryEl));
+    if (wa) lines.push(t('wa.fWa') + ': ' + wa);
+    if (email) lines.push(t('wa.fEmail') + ': ' + email);
+    if (val(countEl)) lines.push(t('wa.fCount') + ': ' + val(countEl));
+    if (val(dateEl)) lines.push(t('wa.fDate') + ': ' + val(dateEl));
+    lines.push(t('wa.fTour') + ': ' + tourLabel);
+    if (val(commentEl)) lines.push(t('wa.fComment') + ': ' + val(commentEl));
 
     window.open(WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+
+    if (successEl) {
+      form.hidden = true;
+      successEl.hidden = false;
+      successEl.classList.add('in');
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   });
 
-  [nameEl, tourEl].forEach(function (el) {
+  [nameEl, tourEl, waEl, emailEl].forEach(function (el) {
     el.addEventListener('input', function () {
       el.classList.remove('invalid');
-      if (nameEl.value.trim() && tourEl.value) errEl.hidden = true;
+      if (val(nameEl) && tourEl.value && (val(waEl) || val(emailEl))) errEl.hidden = true;
     });
   });
 })();

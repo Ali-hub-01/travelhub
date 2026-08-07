@@ -5,18 +5,18 @@
    ============================================================ */
 
 :root {
-  --navy-900: #081428;
-  --navy-800: #0C1F3F;
-  --navy-700: #13233f;
-  --navy-600: #0E2A54;
-  --navy-500: #17376b;
+  --navy-900: #0d0620;
+  --navy-800: #180a35;
+  --navy-700: #211046;
+  --navy-600: #2c1560;
+  --navy-500: #3c1f82;
   --orange: #F26A1E;
   --orange-bright: #FF7A1A;
   --orange-soft: rgba(242, 106, 30, .14);
   --white: #ffffff;
-  --paper: #f4f6fb;
-  --paper-2: #eef1f8;
-  --ink: #13233f;
+  --paper: #f5f3fb;
+  --paper-2: #eeeaf8;
+  --ink: #1c1136;
   --ink-soft: #4a5a75;
   --ink-faint: #8b97ab;
   --star: #cfe0ff;
@@ -128,7 +128,7 @@ section, article[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
    ============================================================ */
 .hero {
   position: relative; overflow: hidden;
-  background: radial-gradient(120% 90% at 50% -10%, #163460 0%, var(--navy-800) 42%, var(--navy-900) 100%);
+  background: radial-gradient(120% 90% at 50% -10%, #3c1f82 0%, var(--navy-700) 42%, var(--navy-900) 100%);
   color: #fff; isolation: isolate;
 }
 #starfield { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
@@ -455,7 +455,87 @@ section, article[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 .field input.invalid, .field select.invalid { border-color: #e5484d; box-shadow: 0 0 0 4px rgba(229,72,77,.12); }
 .form-error { color: #e5484d; font-size: 13.5px; font-weight: 600; margin-bottom: 14px; }
 .booking-form .btn { margin-top: 4px; }
+.booking-form textarea {
+  font: inherit; font-size: 15px; padding: 13px 15px; border-radius: 12px;
+  border: 1.5px solid rgba(12, 31, 63, .14); background: var(--paper); color: var(--ink);
+  resize: vertical; min-height: 84px; width: 100%;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.booking-form textarea:focus { outline: none; border-color: var(--orange); background: #fff; box-shadow: 0 0 0 4px var(--orange-soft); }
 .wa-ico { width: 20px; height: 20px; }
+
+/* Форма на тёмной секции - светлые тексты интро */
+.section-dark .booking-points li { color: #cdd9f2; }
+.booking-refund { margin-top: 18px; font-size: 13px; line-height: 1.7; color: #9fb0d0; max-width: 52ch; }
+
+/* Блок благодарности после отправки формы */
+.booking-success {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 18px;
+  background: rgba(255, 255, 255, .05); border: 1px solid rgba(242, 106, 30, .4);
+  border-radius: var(--radius-lg); padding: 26px 28px;
+}
+.booking-success[hidden] { display: none; }
+.booking-success-ico {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  color: var(--orange-bright); background: var(--orange-soft); border: 1px solid rgba(242, 106, 30, .35);
+}
+.booking-success-ico svg { width: 28px; height: 28px; }
+.booking-success p { font-size: 15.5px; font-weight: 600; color: #fff; }
+
+/* Примечание к ценам под сеткой туров */
+.tours-price-note {
+  margin-top: 26px; font-size: 13.5px; line-height: 1.7; color: #9fb0d0;
+  max-width: 60ch; padding-left: 16px; border-left: 2px solid rgba(242, 106, 30, .5);
+}
+
+/* Дисклеймер о датах пусков */
+.schedule-warn {
+  margin-top: 20px; display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 22px; border-radius: var(--radius);
+  background: rgba(255, 255, 255, .045); border: 1px solid rgba(255, 255, 255, .12);
+}
+.schedule-warn-ico { flex-shrink: 0; color: var(--orange-bright); }
+.schedule-warn-ico svg { width: 26px; height: 26px; }
+.schedule-warn p { font-size: 13.5px; line-height: 1.7; color: #b9c6e2; }
+
+/* ============================================================
+   КАК ЗАБРОНИРОВАТЬ
+   ============================================================ */
+.how-steps {
+  margin-top: 42px; display: grid; gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.how-step {
+  position: relative; min-width: 0;
+  padding: 28px 24px; border-radius: var(--radius-lg);
+  background: #fff; border: 1px solid rgba(12, 31, 63, .07);
+  box-shadow: var(--shadow-card);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.how-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-card-hover); }
+.how-num {
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px;
+  font-family: var(--font-display); font-weight: 700; font-size: 20px; color: #fff;
+  background: linear-gradient(135deg, var(--orange-bright), var(--orange));
+  box-shadow: 0 8px 20px rgba(242, 106, 30, .35);
+}
+.how-step h3 { font-family: var(--font-display); font-weight: 600; font-size: 17px; margin-top: 18px; line-height: 1.25; letter-spacing: -.01em; color: var(--ink); }
+.how-step p { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
+
+/* ============================================================
+   B2B - для туроператоров
+   ============================================================ */
+.section-b2b { background: linear-gradient(135deg, var(--navy-700), var(--navy-500)); color: #fff; padding: clamp(48px, 7vw, 80px) 0; position: relative; overflow: hidden; }
+.section-b2b::before {
+  content: ""; position: absolute; right: -8%; top: -30%; width: 44%; height: 160%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(242, 106, 30, .28), rgba(242, 106, 30, 0) 70%);
+}
+.b2b-inner { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.b2b-copy { min-width: 0; }
+.b2b-eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange-bright); margin-bottom: 12px; }
+.b2b-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3.4vw, 34px); letter-spacing: -.02em; line-height: 1.15; }
+.b2b-text { margin-top: 14px; font-size: clamp(15px, 1.9vw, 17px); color: #d5deee; max-width: 60ch; }
+.section-b2b .btn-light { flex-shrink: 0; }
 
 /* ============================================================
    КОНТАКТЫ
@@ -524,6 +604,7 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
 @media (max-width: 980px) {
   .tours-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tour-card-wide { grid-column: span 2; }
+  .how-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .gallery-item:first-child { grid-column: span 2; }
@@ -580,6 +661,9 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
   .tour-card-wide .tour-name { flex-basis: auto; }
   .tour-card-wide .tour-desc { flex-grow: 0; }
   .why-grid { grid-template-columns: minmax(0, 1fr); }
+  .how-steps { grid-template-columns: minmax(0, 1fr); }
+  .booking-success { flex-direction: column; text-align: center; align-items: center; }
+  .section-b2b .btn-light { width: 100%; }
   .included-grid { grid-template-columns: minmax(0, 1fr); }
   .gallery { grid-template-columns: minmax(0, 1fr); }
   .gallery-item:first-child { grid-column: span 1; }
