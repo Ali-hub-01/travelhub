@@ -526,6 +526,46 @@ section, article[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 .how-step p { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
 
 /* ============================================================
+   ОТЗЫВЫ ТУРИСТОВ
+   ============================================================ */
+.stars { display: inline-flex; gap: 2px; color: #f5b301; font-size: 16px; line-height: 1; letter-spacing: 1px; }
+.stars .star-empty { color: rgba(245, 179, 1, .35); }
+.stars-lg { font-size: 22px; }
+
+.reviews-rating {
+  margin-top: 22px; display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 12px 20px; border-radius: 999px;
+  background: #fff; border: 1px solid rgba(12, 31, 63, .07); box-shadow: var(--shadow-card);
+}
+.reviews-rating-text { font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--ink); letter-spacing: -.01em; }
+
+.reviews-grid {
+  margin-top: 40px; display: grid; gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.review-card {
+  position: relative; min-width: 0; overflow: hidden;
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 30px 26px 24px; border-radius: var(--radius-lg);
+  background: #fff; border: 1px solid rgba(12, 31, 63, .07);
+  box-shadow: var(--shadow-card);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.review-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card-hover); border-color: rgba(242, 106, 30, .35); }
+.review-quote {
+  position: absolute; top: 6px; right: 20px; pointer-events: none;
+  font-family: var(--font-display); font-weight: 800; font-size: 84px; line-height: 1;
+  color: var(--orange-soft);
+}
+.review-text { font-size: 15px; line-height: 1.65; color: var(--ink-soft); }
+.review-foot {
+  margin-top: auto; display: flex; flex-direction: column; gap: 2px;
+  padding-top: 14px; border-top: 1px solid rgba(12, 31, 63, .08);
+}
+.review-name { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--ink); letter-spacing: -.01em; }
+.review-loc { font-size: 13px; color: var(--ink-faint); font-weight: 500; }
+
+/* ============================================================
    B2B - для туроператоров
    ============================================================ */
 .section-b2b { background: linear-gradient(135deg, var(--navy-700), var(--navy-500)); color: #fff; padding: clamp(48px, 7vw, 80px) 0; position: relative; overflow: hidden; }
@@ -564,6 +604,9 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
 .logo-pill { display: inline-grid; place-items: center; width: 62px; height: 62px; border-radius: 18px; background: #fff; box-shadow: 0 10px 26px rgba(0,0,0,.35); }
 .logo-pill img { width: 42px; height: 42px; object-fit: contain; }
 .footer-slogan { font-family: var(--font-display); font-weight: 500; font-size: clamp(15px, 2.3vw, 19px); color: #fff; max-width: 34ch; letter-spacing: -.01em; }
+.footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; }
+.footer-nav a { font-weight: 600; font-size: 14px; color: #b9c6e2; transition: color .2s ease; }
+.footer-nav a:hover { color: #fff; }
 .footer-legal { font-size: 13px; color: #8ea1c4; line-height: 1.8; }
 .footer-copy { font-size: 12.5px; color: #6e7fa0; margin-top: 4px; }
 
@@ -609,6 +652,7 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
   .tour-card-wide { grid-column: span 2; }
   .how-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reviews-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .gallery-item:first-child { grid-column: span 2; }
   .video-inner { grid-template-columns: minmax(0, 1fr); }
@@ -665,6 +709,7 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
   .tour-card-wide .tour-desc { flex-grow: 0; }
   .why-grid { grid-template-columns: minmax(0, 1fr); }
   .how-steps { grid-template-columns: minmax(0, 1fr); }
+  .reviews-grid { grid-template-columns: minmax(0, 1fr); }
   .booking-success { flex-direction: column; text-align: center; align-items: center; }
   .section-b2b .btn-light { width: 100%; }
   .included-grid { grid-template-columns: minmax(0, 1fr); }
