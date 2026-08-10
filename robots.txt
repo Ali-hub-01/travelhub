@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ali-hub-01.github.io/travelhub/sitemap.xml
+Sitemap: https://travel-hub.kz/sitemap.xml
