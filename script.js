@@ -839,6 +839,14 @@ var I18N = {
    2. ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
    ============================================================ */
 var WA_PHONE = 'https://wa.me/77760909818';
+
+/* Google Ads: конверсия "Контакт" при клике по WhatsApp-ссылкам */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a[href*="wa.me/"]') : null;
+  if (a && typeof window.gtag_report_contact === 'function') {
+    window.gtag_report_contact();
+  }
+}, true);
 var currentLang = 'ru';
 
 function t(key) {
@@ -1175,6 +1183,7 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
     lines.push(t('wa.fTour') + ': ' + tourLabel);
     if (val(commentEl)) lines.push(t('wa.fComment') + ': ' + val(commentEl));
 
+    if (typeof window.gtag_report_lead === 'function') window.gtag_report_lead();
     window.open(WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
 
     if (successEl) {
