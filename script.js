@@ -899,13 +899,11 @@ function updateWaLinks() {
   });
 }
 
-document.querySelectorAll('.lang-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    switchLang(btn.getAttribute('data-lang'));
-  });
-});
-
+/* Языки теперь по путям (/ru/ /en/ /cn/) - переключатель это ссылки.
+   Каждая страница задаёт window.__THLANG до подключения script.js. */
 (function initLang() {
+  var forced = window.__THLANG;
+  if (forced && I18N[forced]) { switchLang(forced); return; }
   var saved = null;
   try { saved = localStorage.getItem('thlang'); } catch (e) { /* ignore */ }
   switchLang(saved && I18N[saved] ? saved : 'ru');
