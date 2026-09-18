@@ -67,7 +67,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/styles.css?v=7" rel="stylesheet"/>
+<link href="/styles.css?v=8" rel="stylesheet"/>
 <link href="https://travel-hub.kz/ru/" hreflang="ru" rel="alternate"/><link href="https://travel-hub.kz/en/" hreflang="en" rel="alternate"/><link href="https://travel-hub.kz/cn/" hreflang="zh-CN" rel="alternate"/><link href="https://travel-hub.kz/ru/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- ======================= ШАПКА ======================= -->
@@ -637,6 +637,34 @@
 <img alt="" class="lightbox-img" id="lightboxImg" src=""/>
 </figure>
 </div>
-<script>window.__THLANG='en';</script><script src="/script.js?v=10"></script>
+<!-- Промо-модалка (акция) -->
+<div class="promo-modal" id="promoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+<div class="promo-backdrop" data-promo-close></div>
+<div class="promo-card">
+<button class="promo-x" type="button" data-promo-close aria-label="Close" data-i18n-aria="promo.close">&times;</button>
+<div class="promo-media">
+<video class="promo-video" id="promoVideo" src="/assets/promo-video.mp4" playsinline loop preload="metadata"></video>
+<button class="promo-sound" id="promoSound" type="button" hidden data-i18n="promo.sound">🔊 Turn on sound</button>
+</div>
+<div class="promo-info">
+<span class="promo-badge" data-i18n="promo.badge">🚀 OFFER UNTIL THE END OF 2026</span>
+<h3 class="promo-title" id="promoTitle" data-i18n="promo.title">Visit the Baikonur Cosmodrome</h3>
+<div class="promo-price"><b>150 000 ₸</b> <span data-i18n="promo.priceUnit">per person</span></div>
+<p class="promo-lead" data-i18n="promo.lead">A unique chance to visit the legendary cosmodrome on non-launch days at a special price.</p>
+<p class="promo-inc" data-i18n="promo.includeTitle">The program can include:</p>
+<ul class="promo-list">
+<li data-i18n="promo.item1">a guided tour of the cosmodrome facilities</li>
+<li data-i18n="promo.item2">the historic sites of Baikonur</li>
+<li data-i18n="promo.item3">visits to accessible facilities per the approved program</li>
+<li data-i18n="promo.item4">transport around the cosmodrome</li>
+<li data-i18n="promo.item5">an accompanying guide</li>
+</ul>
+<div class="promo-priceline" data-i18n="promo.priceLine">Offer price: 150,000 ₸ / person</div>
+<div class="promo-until" data-i18n="promo.until">Valid until December 31, 2026</div>
+<a class="promo-cta" href="#booking" data-promo-close data-i18n="promo.cta">Book the offer</a>
+</div>
+</div>
+</div>
+<script>window.__THLANG='en';</script><script src="/script.js?v=11"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/styles.css?v=7" rel="stylesheet"/>
+<link href="/styles.css?v=8" rel="stylesheet"/>
 <link href="https://travel-hub.kz/ru/" hreflang="ru" rel="alternate"/><link href="https://travel-hub.kz/en/" hreflang="en" rel="alternate"/><link href="https://travel-hub.kz/cn/" hreflang="zh-CN" rel="alternate"/><link href="https://travel-hub.kz/ru/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- ======================= ШАПКА ======================= -->
@@ -637,6 +637,34 @@
 <img alt="" class="lightbox-img" id="lightboxImg" src=""/>
 </figure>
 </div>
-<script>window.__THLANG='zh';</script><script src="/script.js?v=10"></script>
+<!-- Промо-модалка (акция) -->
+<div class="promo-modal" id="promoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+<div class="promo-backdrop" data-promo-close></div>
+<div class="promo-card">
+<button class="promo-x" type="button" data-promo-close aria-label="关闭" data-i18n-aria="promo.close">&times;</button>
+<div class="promo-media">
+<video class="promo-video" id="promoVideo" src="/assets/promo-video.mp4" playsinline loop preload="metadata"></video>
+<button class="promo-sound" id="promoSound" type="button" hidden data-i18n="promo.sound">🔊 开启声音</button>
+</div>
+<div class="promo-info">
+<span class="promo-badge" data-i18n="promo.badge">🚀 2026年底前特惠</span>
+<h3 class="promo-title" id="promoTitle" data-i18n="promo.title">参观拜科努尔航天发射场</h3>
+<div class="promo-price"><b>150 000 ₸</b> <span data-i18n="promo.priceUnit">每人</span></div>
+<p class="promo-lead" data-i18n="promo.lead">难得的机会，在非发射日以特惠价格参观传奇的拜科努尔航天发射场。</p>
+<p class="promo-inc" data-i18n="promo.includeTitle">行程可包含：</p>
+<ul class="promo-list">
+<li data-i18n="promo.item1">参观航天发射场设施</li>
+<li data-i18n="promo.item2">拜科努尔历史遗址</li>
+<li data-i18n="promo.item3">按照批准的行程参观开放设施</li>
+<li data-i18n="promo.item4">发射场内交通</li>
+<li data-i18n="promo.item5">全程陪同</li>
+</ul>
+<div class="promo-priceline" data-i18n="promo.priceLine">特惠价：150 000 ₸ / 每人</div>
+<div class="promo-until" data-i18n="promo.until">活动截止至 2026 年 12 月 31 日</div>
+<a class="promo-cta" href="#booking" data-promo-close data-i18n="promo.cta">立即预订特惠</a>
+</div>
+</div>
+</div>
+<script>window.__THLANG='zh';</script><script src="/script.js?v=11"></script>
 <!-- WeChat: блок готов, добавить QR/ID когда будет. <a class="btn btn-primary" id="wechatBtn" href="#" data-wechat>WeChat</a> --></body>
 </html>

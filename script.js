@@ -20,6 +20,22 @@ var I18N = {
     'meta.title': 'TravelHub - туры на запуск ракеты с Байконура | Туроператор Казахстана',
     'meta.desc': 'Увидеть запуск ракеты с Байконура вживую: туры 1-3 дня от 120 000 ₸. Лицензированный принимающий туроператор Казахстана. Пропуска, гиды RU/EN/CN, наблюдение с официально определённой смотровой площадки. Туры по всему Казахстану: Мангистау, горы Алматы, Астана.',
 
+    'promo.badge': '🚀 АКЦИЯ ДО КОНЦА 2026 ГОДА',
+    'promo.title': 'Посещение космодрома Байконур',
+    'promo.priceUnit': 'с человека',
+    'promo.lead': 'Уникальная возможность посетить легендарный космодром в межпусковые дни по специальной цене.',
+    'promo.includeTitle': 'В программу можно включить:',
+    'promo.item1': 'экскурсию по объектам космодрома',
+    'promo.item2': 'исторические площадки Байконура',
+    'promo.item3': 'посещение доступных объектов согласно утверждённой программе',
+    'promo.item4': 'транспорт по территории космодрома',
+    'promo.item5': 'сопровождение',
+    'promo.priceLine': 'Стоимость по акции: 150 000 ₸ / человек',
+    'promo.until': 'Акция действует до 31 декабря 2026 года',
+    'promo.cta': 'Забронировать по акции',
+    'promo.close': 'Закрыть',
+    'promo.sound': '🔊 Включить звук',
+
     'nav.aria': 'Основная навигация',
     'nav.burger': 'Открыть меню',
     'lang.aria': 'Выбор языка',
@@ -293,6 +309,22 @@ var I18N = {
     'meta.title': 'TravelHub - Baikonur Rocket Launch Tours | Kazakhstan Tour Operator',
     'meta.desc': 'Watch a real rocket launch from Baikonur: 1-3 day tours from €230. Licensed inbound tour operator in Kazakhstan. Permits, RU/EN/CN guides, viewing from the officially designated observation platform. Tours across Kazakhstan: Mangystau, Almaty mountains, Astana.',
 
+    'promo.badge': '🚀 OFFER UNTIL THE END OF 2026',
+    'promo.title': 'Visit the Baikonur Cosmodrome',
+    'promo.priceUnit': 'per person',
+    'promo.lead': 'A unique chance to visit the legendary cosmodrome on non-launch days at a special price.',
+    'promo.includeTitle': 'The program can include:',
+    'promo.item1': 'a guided tour of the cosmodrome facilities',
+    'promo.item2': 'the historic sites of Baikonur',
+    'promo.item3': 'visits to accessible facilities per the approved program',
+    'promo.item4': 'transport around the cosmodrome',
+    'promo.item5': 'an accompanying guide',
+    'promo.priceLine': 'Offer price: 150,000 ₸ / person',
+    'promo.until': 'Valid until December 31, 2026',
+    'promo.cta': 'Book the offer',
+    'promo.close': 'Close',
+    'promo.sound': '🔊 Turn on sound',
+
     'nav.aria': 'Main navigation',
     'nav.burger': 'Open menu',
     'lang.aria': 'Language selection',
@@ -565,6 +597,22 @@ var I18N = {
   zh: {
     'meta.title': 'TravelHub - 拜科努尔火箭发射观摩之旅 | 哈萨克斯坦旅游运营商',
     'meta.desc': '亲眼见证拜科努尔火箭发射：一至三日游，€230 起。哈萨克斯坦持牌接待旅游运营商：办理通行证，俄英中三语导游，在官方指定的观景平台观看发射。畅游哈萨克斯坦全境：曼格斯套、阿拉木图雪山、阿斯塔纳。',
+
+    'promo.badge': '🚀 2026年底前特惠',
+    'promo.title': '参观拜科努尔航天发射场',
+    'promo.priceUnit': '每人',
+    'promo.lead': '难得的机会，在非发射日以特惠价格参观传奇的拜科努尔航天发射场。',
+    'promo.includeTitle': '行程可包含：',
+    'promo.item1': '参观航天发射场设施',
+    'promo.item2': '拜科努尔历史遗址',
+    'promo.item3': '按照批准的行程参观开放设施',
+    'promo.item4': '发射场内交通',
+    'promo.item5': '全程陪同',
+    'promo.priceLine': '特惠价：150 000 ₸ / 每人',
+    'promo.until': '活动截止至 2026 年 12 月 31 日',
+    'promo.cta': '立即预订特惠',
+    'promo.close': '关闭',
+    'promo.sound': '🔊 开启声音',
 
     'nav.aria': '主导航',
     'nav.burger': '打开菜单',
@@ -1197,4 +1245,68 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
       if (val(nameEl) && tourEl.value && (val(waEl) || val(emailEl))) errEl.hidden = true;
     });
   });
+})();
+
+/* ===== Промо-модалка (акция «Посещение Байконура») ===== */
+(function () {
+  var modal = document.getElementById('promoModal');
+  if (!modal) return;
+  var video = document.getElementById('promoVideo');
+  var soundBtn = document.getElementById('promoSound');
+  var opened = false;
+
+  function tryPlayWithSound() {
+    if (!video) return;
+    try { video.currentTime = 0; } catch (e) {}
+    video.muted = false;
+    var p = video.play();
+    if (p && p.catch) {
+      p.catch(function () {
+        // браузер заблокировал автозвук до взаимодействия — играем без звука + кнопка «звук»
+        video.muted = true;
+        video.play().catch(function () {});
+        if (soundBtn) soundBtn.hidden = false;
+      });
+    }
+  }
+  function enableSound() {
+    if (!video) return;
+    video.muted = false;
+    video.play().catch(function () {});
+    if (soundBtn) soundBtn.hidden = true;
+  }
+  function openModal() {
+    if (opened) return;
+    opened = true;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    tryPlayWithSound();
+    // первый тап/клик где угодно включает звук, если браузер заблокировал автозвук
+    document.addEventListener('pointerdown', function onFirst() {
+      if (video && video.muted && modal.classList.contains('is-open')) enableSound();
+      document.removeEventListener('pointerdown', onFirst);
+    }, { once: true });
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (video) { try { video.pause(); } catch (e) {} }
+  }
+  if (soundBtn) soundBtn.addEventListener('click', enableSound);
+  var closers = modal.querySelectorAll('[data-promo-close]');
+  for (var i = 0; i < closers.length; i++) closers[i].addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+  // показать один раз за сессию, через 1.2 с после загрузки
+  var seen = false;
+  try { seen = sessionStorage.getItem('th_promo_seen') === '1'; } catch (e) {}
+  if (!seen) {
+    setTimeout(function () {
+      openModal();
+      try { sessionStorage.setItem('th_promo_seen', '1'); } catch (e) {}
+    }, 1200);
+  }
 })();
