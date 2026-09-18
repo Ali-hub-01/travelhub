@@ -35,6 +35,7 @@ var I18N = {
     'promo.cta': 'Забронировать по акции',
     'promo.close': 'Закрыть',
     'promo.sound': '🔊 Включить звук',
+    'promo.reopen': 'Акция',
 
     'nav.aria': 'Основная навигация',
     'nav.burger': 'Открыть меню',
@@ -325,6 +326,7 @@ var I18N = {
     'promo.cta': 'Book the offer',
     'promo.close': 'Close',
     'promo.sound': '🔊 Turn on sound',
+    'promo.reopen': 'Special offer',
 
     'nav.aria': 'Main navigation',
     'nav.burger': 'Open menu',
@@ -615,6 +617,7 @@ var I18N = {
     'promo.cta': '立即预订特惠',
     'promo.close': '关闭',
     'promo.sound': '🔊 开启声音',
+    'promo.reopen': '特惠',
 
     'nav.aria': '主导航',
     'nav.burger': '打开菜单',
@@ -1271,7 +1274,10 @@ function notifyTelegram(text) {
   if (!modal) return;
   var video = document.getElementById('promoVideo');
   var soundBtn = document.getElementById('promoSound');
-  var opened = false;
+  var fab = document.getElementById('promoFab');
+
+  function showFab() { if (fab) fab.classList.add('is-visible'); }
+  function hideFab() { if (fab) fab.classList.remove('is-visible'); }
 
   function tryPlayWithSound() {
     if (!video) return;
@@ -1294,8 +1300,8 @@ function notifyTelegram(text) {
     if (soundBtn) soundBtn.hidden = true;
   }
   function openModal() {
-    if (opened) return;
-    opened = true;
+    if (modal.classList.contains('is-open')) return;
+    hideFab();
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1311,8 +1317,10 @@ function notifyTelegram(text) {
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     if (video) { try { video.pause(); } catch (e) {} }
+    showFab();
   }
   if (soundBtn) soundBtn.addEventListener('click', enableSound);
+  if (fab) fab.addEventListener('click', openModal);
   var closers = modal.querySelectorAll('[data-promo-close]');
   for (var i = 0; i < closers.length; i++) closers[i].addEventListener('click', closeModal);
   document.addEventListener('keydown', function (e) {
@@ -1326,5 +1334,7 @@ function notifyTelegram(text) {
       openModal();
       try { sessionStorage.setItem('th_promo_seen', '1'); } catch (e) {}
     }, 1200);
+  } else {
+    showFab();
   }
 })();
