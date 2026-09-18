@@ -236,8 +236,8 @@ var I18N = {
 
     'bk.kicker': 'Заявка за 30 секунд',
     'bk.title': 'Оставьте заявку - рассчитаем стоимость тура',
-    'bk.sub': 'Заполните форму - заявка откроется в WhatsApp, мы ответим быстро. Никаких данных на сервер не отправляем.',
-    'bk.p1': 'Ответ в WhatsApp в течение рабочего дня',
+    'bk.sub': 'Заполните форму - мы свяжемся с вами и рассчитаем стоимость тура.',
+    'bk.p1': 'Ответим в течение рабочего дня',
     'bk.p2': 'Поможем выбрать дату под ближайший пуск',
     'bk.p3': 'При изменении, переносе или отмене пуска - альтернативная дата или возврат по условиям договора.',
     'refund.full': 'В случае изменения, переноса или отмены запуска мы предложим альтернативную дату, изменение программы или возврат средств в соответствии с условиями договора.',
@@ -246,7 +246,7 @@ var I18N = {
     'form.namePh': 'Как к вам обращаться',
     'form.country': 'Страна / гражданство',
     'form.countryPh': 'Например, Китай',
-    'form.wa': 'WhatsApp',
+    'form.wa': 'Телефон',
     'form.waPh': '+7 700 000 0000',
     'form.email': 'E-mail',
     'form.emailPh': 'you@example.com',
@@ -263,8 +263,8 @@ var I18N = {
     'form.datePh': 'например, 24.11.2026',
     'form.comment': 'Комментарий',
     'form.commentPh': 'Пожелания к программе, вопросы',
-    'form.err': 'Пожалуйста, укажите имя, тур и WhatsApp или e-mail',
-    'form.submit': 'Получить предложение',
+    'form.err': 'Пожалуйста, укажите имя, тур и телефон или e-mail',
+    'form.submit': 'Оставить заявку',
     'form.success': 'Спасибо! Мы получили вашу заявку. Менеджер TravelHub свяжется с вами для уточнения программы, стоимости и необходимых документов.',
 
     'b2b.title': 'Для туроператоров и турагентств',
@@ -285,6 +285,7 @@ var I18N = {
     'ft.rights': 'Все права защищены',
 
     'wa.fab': 'Написать в WhatsApp',
+    'fab.lead': 'Оставить заявку',
     'lb.close': 'Закрыть',
     'wa.t1': 'Здравствуйте! Интересует тур: Байконур - наблюдение запуска, 1 день',
     'wa.t2': 'Здравствуйте! Интересует тур: Байконур - расширенная программа, 3 дня',
@@ -296,7 +297,7 @@ var I18N = {
     'wa.hello': 'Здравствуйте! Заявка с сайта TravelHub',
     'wa.fName': 'Имя и фамилия',
     'wa.fCountry': 'Страна',
-    'wa.fWa': 'WhatsApp',
+    'wa.fWa': 'Телефон',
     'wa.fEmail': 'E-mail',
     'wa.fCount': 'Туристов',
     'wa.fTour': 'Тур',
@@ -525,8 +526,8 @@ var I18N = {
 
     'bk.kicker': 'A 30-second request',
     'bk.title': 'Leave a request - we will calculate your tour cost',
-    'bk.sub': 'Fill in the form - your request opens in WhatsApp and we reply fast. No data is sent to any server.',
-    'bk.p1': 'WhatsApp reply within one business day',
+    'bk.sub': 'Fill in the form - we will contact you and calculate your tour price.',
+    'bk.p1': 'We reply within one business day',
     'bk.p2': 'We will help you pick a date for the next launch',
     'bk.p3': 'If the launch is changed, postponed or canceled - an alternative date or a refund under the terms of the contract.',
     'refund.full': 'In case of any change, postponement or cancellation of the launch, we will offer an alternative date, a program change or a refund in accordance with the terms of the contract.',
@@ -535,7 +536,7 @@ var I18N = {
     'form.namePh': 'How should we address you',
     'form.country': 'Country / citizenship',
     'form.countryPh': 'e.g. China',
-    'form.wa': 'WhatsApp',
+    'form.wa': 'Phone',
     'form.waPh': '+7 700 000 0000',
     'form.email': 'E-mail',
     'form.emailPh': 'you@example.com',
@@ -552,8 +553,8 @@ var I18N = {
     'form.datePh': 'e.g. 24.11.2026',
     'form.comment': 'Comment',
     'form.commentPh': 'Program preferences, questions',
-    'form.err': 'Please enter your name, a tour and WhatsApp or e-mail',
-    'form.submit': 'Get an offer',
+    'form.err': 'Please enter your name, a tour and phone or e-mail',
+    'form.submit': 'Leave a request',
     'form.success': 'Thank you! We have received your request. A TravelHub manager will contact you to confirm the program, cost and required documents.',
 
     'b2b.title': 'For tour operators and travel agencies',
@@ -574,6 +575,7 @@ var I18N = {
     'ft.rights': 'All rights reserved',
 
     'wa.fab': 'Message us on WhatsApp',
+    'fab.lead': 'Leave a request',
     'lb.close': 'Close',
     'wa.t1': 'Hello! I’m interested in the tour: Baikonur launch viewing, 1 day',
     'wa.t2': 'Hello! I’m interested in the tour: Baikonur extended program, 3 days',
@@ -585,7 +587,7 @@ var I18N = {
     'wa.hello': 'Hello! Booking request from the TravelHub website',
     'wa.fName': 'Full name',
     'wa.fCountry': 'Country',
-    'wa.fWa': 'WhatsApp',
+    'wa.fWa': 'Phone',
     'wa.fEmail': 'E-mail',
     'wa.fCount': 'Travelers',
     'wa.fTour': 'Tour',
@@ -814,8 +816,8 @@ var I18N = {
 
     'bk.kicker': '30 秒提交申请',
     'bk.title': '提交申请 - 我们为您核算行程费用',
-    'bk.sub': '填写表单后申请将在 WhatsApp 中打开，我们会尽快回复。您的数据不会上传至任何服务器。',
-    'bk.p1': '工作日内通过 WhatsApp 回复',
+    'bk.sub': '填写表单，我们会与您联系并计算行程报价。',
+    'bk.p1': '我们将在工作日内回复',
     'bk.p2': '帮您选择最近发射窗口的日期',
     'bk.p3': '如发射变更、推迟或取消 - 按合同条款改期或退款。',
     'refund.full': '如遇发射变更、推迟或取消，我们将根据合同条款为您提供替代日期、调整行程或退还款项。',
@@ -824,7 +826,7 @@ var I18N = {
     'form.namePh': '请问如何称呼您',
     'form.country': '国家 / 国籍',
     'form.countryPh': '例如：中国',
-    'form.wa': 'WhatsApp',
+    'form.wa': '电话',
     'form.waPh': '+7 700 000 0000',
     'form.email': '电子邮箱',
     'form.emailPh': 'you@example.com',
@@ -841,8 +843,8 @@ var I18N = {
     'form.datePh': '例如 24.11.2026',
     'form.comment': '备注',
     'form.commentPh': '行程需求、疑问',
-    'form.err': '请填写姓名、选择线路并填写 WhatsApp 或电子邮箱',
-    'form.submit': '获取方案',
+    'form.err': '请填写姓名、选择线路并填写电话或电子邮箱',
+    'form.submit': '提交申请',
     'form.success': '感谢您！我们已收到您的申请。TravelHub 的顾问将与您联系，确认行程、费用及所需材料。',
 
     'b2b.title': '致旅游运营商与旅行社',
@@ -863,6 +865,7 @@ var I18N = {
     'ft.rights': '版权所有',
 
     'wa.fab': '通过 WhatsApp 联系我们',
+    'fab.lead': '提交申请',
     'lb.close': '关闭',
     'wa.t1': '您好！我想咨询：拜科努尔观看火箭发射一日游',
     'wa.t2': '您好！我想咨询：拜科努尔深度三日游',
@@ -874,7 +877,7 @@ var I18N = {
     'wa.hello': '您好！来自 TravelHub 网站的预订申请',
     'wa.fName': '姓名',
     'wa.fCountry': '国家',
-    'wa.fWa': 'WhatsApp',
+    'wa.fWa': '电话',
     'wa.fEmail': '电子邮箱',
     'wa.fCount': '人数',
     'wa.fTour': '线路',
@@ -1179,6 +1182,21 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
 /* ============================================================
    8. ФОРМА ЗАЯВКИ → WhatsApp
    ============================================================ */
+/* Telegram-приём заявок (бот @travelhub_artsign_bot) */
+var TH_TG_TOKEN = '8863405055:AAGvaKxMCXYfa5txDDak_tJlaUEdHno1dbg';
+var TH_TG_CHAT = '';  /* TODO: chat_id — подставить после /start боту @travelhub_artsign_bot */
+function notifyTelegram(text) {
+  if (!text || !TH_TG_CHAT) return;
+  try {
+    fetch('https://api.telegram.org/bot' + TH_TG_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TH_TG_CHAT, text: text, disable_web_page_preview: true }),
+      keepalive: true
+    }).catch(function () {});
+  } catch (e) {}
+}
+
 (function bookingForm() {
   var form = document.getElementById('bookingForm');
   if (!form) return;
@@ -1217,7 +1235,7 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
 
     var tourLabel = t('form.o' + tour.slice(1));
     var lines = [
-      t('wa.hello'),
+      '🚀 Новая заявка · TravelHub (' + currentLang.toUpperCase() + ')',
       t('wa.fName') + ': ' + name
     ];
     if (val(countryEl)) lines.push(t('wa.fCountry') + ': ' + val(countryEl));
@@ -1229,7 +1247,7 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
     if (val(commentEl)) lines.push(t('wa.fComment') + ': ' + val(commentEl));
 
     if (typeof window.gtag_report_lead === 'function') window.gtag_report_lead();
-    window.open(WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    notifyTelegram(lines.join('\n'));
 
     if (successEl) {
       form.hidden = true;

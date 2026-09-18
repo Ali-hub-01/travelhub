@@ -764,3 +764,17 @@ a.contact-card:hover { transform: translateY(-4px); border-color: rgba(242,106,3
   .promo-media{flex:none;height:190px;min-height:0}
   .promo-info{padding:22px 20px 24px}
 }
+
+/* ===== Плавающая кнопка «Оставить заявку» ===== */
+.lead-fab {
+  position: fixed; right: 18px; bottom: 18px; z-index: 70;
+  padding: 14px 22px; border-radius: 100px;
+  background: linear-gradient(135deg, var(--orange), var(--orange-bright)); color: #fff;
+  font-family: var(--font-display); font-weight: 700; font-size: 14px; text-decoration: none;
+  box-shadow: 0 12px 30px rgba(242,106,30,.5);
+  transition: transform .25s ease, box-shadow .25s ease;
+  animation: leadPulse 2.6s ease-out infinite;
+}
+.lead-fab:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 16px 36px rgba(242,106,30,.6); }
+@keyframes leadPulse { 0% { box-shadow: 0 12px 30px rgba(242,106,30,.5), 0 0 0 0 rgba(242,106,30,.5) } 70% { box-shadow: 0 12px 30px rgba(242,106,30,.5), 0 0 0 16px rgba(242,106,30,0) } 100% { box-shadow: 0 12px 30px rgba(242,106,30,.5), 0 0 0 0 rgba(242,106,30,0) } }
+@media (max-width:520px) { .lead-fab { right: 12px; bottom: 12px; padding: 12px 18px; font-size: 13px } }
