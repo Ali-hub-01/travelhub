@@ -1186,7 +1186,7 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
    8. ФОРМА ЗАЯВКИ → WhatsApp
    ============================================================ */
 /* Telegram-приём заявок (бот @travelhub_artsign_bot) */
-var TH_TG_TOKEN = '8863405055:AAGvaKxMCXYfa5txDDak_tJlaUEdHno1dbg';
+var TH_TG_TOKEN = '8863405055:AAGtY0ctSrWIsup1KBwpMFvtAX7e_fYfNao';
 var TH_TG_CHAT = '469106806';  /* Ali Kanafin @alikanafin */
 function notifyTelegram(text) {
   if (!text || !TH_TG_CHAT) return;
