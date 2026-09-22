@@ -1186,11 +1186,21 @@ makeStarfield(document.getElementById('videoStars'), { density: 8000, meteor: fa
    8. ФОРМА ЗАЯВКИ → WhatsApp
    ============================================================ */
 /* Telegram-приём заявок (бот @travelhub_artsign_bot) */
-/* БЕЗОПАСНОСТЬ: токен бота УБРАН из клиентского кода после компрометации (его воровали из JS
-   и перехватывали бота). Прямую отправку в Telegram с сайта отключили. Доставка заявок пойдёт
-   через серверный бэкенд (Cloudflare Worker), где токен не виден в браузере. До подключения воркера
-   TG-уведомления с сайта не отправляются (форма всё равно фиксирует конверсию Google Ads и показывает «спасибо»). */
-function notifyTelegram(text) { /* disabled on purpose: no bot token in client code */ }
+/* Заявки уходят через серверный Cloudflare Worker (токен бота живёт ТОЛЬКО на сервере,
+   в браузере его нет). Воркер сам рассылает заявку владельцу и всем клиентам, подписавшимся через /start. */
+var TH_LEAD_URL = 'https://travelhub-leadbot.alikanafin0.workers.dev/lead';
+var TH_LEAD_SECRET = '32e27e418216e98562d8987ef31eb7480c568b24ca31f1a4';
+function notifyTelegram(text) {
+  if (!text) return;
+  try {
+    fetch(TH_LEAD_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret: TH_LEAD_SECRET, text: text }),
+      keepalive: true
+    }).catch(function () {});
+  } catch (e) {}
+}
 
 (function bookingForm() {
   var form = document.getElementById('bookingForm');
